@@ -1,0 +1,12 @@
+let greeting = "Hi";
+let phrase = greeting + " Holly";
+let price = 20.10;
+let quantity = 2;
+let total = price * quantity;
+let age1 = 10;
+let age2 = 25;
+let age3 = 15;
+let averageAge = (age1 + age2 + age3) / 3;
+let loggedIn = true;
+let adminUser = false;
+let missingInfo = undefined;
