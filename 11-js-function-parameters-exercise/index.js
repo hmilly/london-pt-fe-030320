@@ -5,7 +5,7 @@
  * of your name and console.log "My name is YOUR_NAME"
  */
 function myName(name){
-  return console.log(`My name is ${name}`);
+  console.log(`My name is ${name}`);
 }
 /**
  * Exercise 2
@@ -14,7 +14,7 @@ function myName(name){
  * of your age and console.log "I'm YOUR_AGE years old"
  */
 function myAge(age){
-  return console.log(`I'm ${age} years old`);
+  console.log(`I'm ${age} years old`);
 }
 /**
  * Exercise 3
@@ -24,7 +24,7 @@ function myAge(age){
  * "I'm from YOUR_CITY, YOUR_COUNTRY"
  */
 function aboutMe(city, country){
-  return console.log(`I'm from ${city}, ${country}`);
+  console.log(`I'm from ${city}, ${country}`);
 }
 /**
  * Exercise 4
@@ -32,7 +32,5 @@ function aboutMe(city, country){
  * as params and log sum.
  */
 function logSum(num1, num2){
-  return console.log(num1 + num2);
+  console.log(num1 + num2);
 }
-
-logSum(70);
