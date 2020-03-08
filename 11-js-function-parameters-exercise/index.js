@@ -32,7 +32,7 @@ function aboutMe(city, country){
  * as params and log sum.
  */
 function logSum(num1, num2){
-  return console.log(num1 + num2)
+  return console.log(num1 + num2);
 }
 
 logSum(70);

@@ -4,9 +4,7 @@
  * create a global variable "myFavoriteAnimal" and
  * assign your favorite animal
  */
-  global.alert = jest.fn();
-  
- let myFavoriteAnimal = "Dog";
+ const myFavoriteAnimal = "Dog";
 
 /**
  * Exercise 2
@@ -18,6 +16,7 @@
 function myAnimalWithLog() {
   return console.log(`My favorite animal is ${myFavoriteAnimal}`);
 }
+myAnimalWithLog();
 
 /**
  * Exercise 3
@@ -31,6 +30,7 @@ function myAnimalWithLog() {
 function myAnimalWithWarn() {
    return console.warn(`My favorite animal is ${myFavoriteAnimal}`);
 };
+myAnimalWithWarn();
 /**
  * Exercise 4
  *
@@ -42,6 +42,7 @@ function myAnimalWithWarn() {
 function myAnimalWithError() {
   return console.error(`My favorite animal is ${myFavoriteAnimal}`);
 }
+myAnimalWithError();
 /**
  * Exercise 5
  * create a function "myCity", which will have
