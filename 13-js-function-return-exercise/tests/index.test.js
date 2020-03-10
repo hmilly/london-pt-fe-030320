@@ -40,7 +40,6 @@ function randomNumber(){
   return Math.floor((Math.random() * 10) + 1);
   }
   
-
 /**
  * Exercise 5
  *
@@ -78,21 +77,21 @@ describe("minNumber", () => {
 //Exercise 4
 describe("randomNumber", () => {
 	test("should return random number", () => {
-		let num = randomNumber();
+		const number = randomNumber();
 
-		expect(num !== randomNumber()).toBeTruthy();
+		expect(number !== randomNumber()).toBeTruthy();
 	});
 
 	test("should return number between 1 and 10", () => {
-		let num = randomNumber();
+		const number = randomNumber();
 
-		expect(num > 0 && num <= 10).toBeTruthy();
+		expect(number > 0 && number <= 10).toBeTruthy();
 	});
 
 	test("returned number should be integer", () => {
-		let num = randomNumber();
+		const number = randomNumber();
 
-		expect(num === Math.floor(num)).toBeTruthy();
+		expect(number === Math.floor(number)).toBeTruthy();
 	});
 });
 
