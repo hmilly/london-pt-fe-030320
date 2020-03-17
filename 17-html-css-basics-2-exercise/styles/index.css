@@ -1,20 +1,18 @@
 *{
     box-sizing: border-box;
 }
-
 .main-container{
     width: 100%;
 }
-
 p{
     font-size: 2vw;;
 }
+
 
 .one{
     background-color: black;
     height: 65%;
 }
-
 .one-cont{
     height: 100%;
     position: relative;
@@ -60,46 +58,64 @@ p{
     font-size: 1.5vw;
 }
 
+
+
+
+
 .two{
     height: 120%;
     background: white;
 }
 .two-cont{
-    height: 90%;
-    width: 80%;
     display: flex;
+    width: 80%;
+    height: 80%;
     position: relative; 
     flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-between;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    padding: 10%;
+    padding: 5%;
+    margin-left: 10%;
     overflow: hidden;
 }
-.two-bx1, .two-bx2, .two-bx3, .two-bx4{
-    flex: 1 1 30%;
-    font-size: 1vw;
-    padding: 4%;
+.two-left-col, .two-right-col{
+    width: 50%;
+    height: 80%;
+    padding: 1%;
 }
-.two-bx2 > h2{
+.two-html-p > h2{
     color: orangered;
-    padding-top: 7%;
-
+    padding-top: 15%;
+    text-align: center;
+    font-size: 3vw;
 }
-.two-bx3 > h2{
+.two-css-p > h2{
     color:  rgb(112, 163, 39);
-    padding-top: 7%;
+    padding-top: 15%;
+    text-align: center;
+    font-size: 3vw;
 }
-.two-bx3 > h2 > p, .two-bx2 > h2 > p{
-    text-align: left;
+.two-html-p > p, .two-css-p > p{
+    padding: 15%;
+    font-size: 1.5vw;
 }
-.two-bx1, .two-bx4{
-    background-image: url(https://github.com/CodersInHoods/london-pt-fe-030320/blob/master/17-html-css-basics-2-exercise/images/codes-coding-css-1921326.jpg?raw=true);
-    color: rgb(255, 255, 192);
-    text-shadow: 4px 4px 5px rgb(129, 129, 129);
-    padding-top: 7%;
+
+
+.two-html-head, .two-css-head{
+    color: white;
+    text-shadow: 1vw 1vw 1vw rgb(70, 70, 70);
+    padding-top: 10%;
     font-size: 4vw;
     text-align: center;
+}
+.two-html-head > img, .two-css-head > img{
+    width: 100%;
+    filter: blur(0.05em);
+}
+.two-html-head > h1, .two-css-head > h1{
+    position: absolute;
+    margin-top: -30%;
+    width: 42%;
 }
 
 .three{
@@ -146,7 +162,6 @@ p{
     height: 8%;
     font-size: 1.5vw;
 }
-
 .four-cont{
     display: flex;
     flex-wrap: nowrap;
