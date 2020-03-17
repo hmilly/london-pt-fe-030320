@@ -1,73 +1,192 @@
-* {
+*{
     box-sizing: border-box;
 }
 
-body {
-    font-size: 14px;
-}
-
-/* Custom styles */
-@keyframes back_glow_pink {
-    0% { transform: translate(10%, 10%) scale(0.8); }
-    50% { transform: translate(-15%, -15%) scale(1.2); }
-    100% { transform: translate(10%, 10%) scale(0.8); }
-}
-
-@keyframes back_glow_blue {
-    0% { transform: translate(-10%, -10%) scale(0.8); }
-    50% { transform: translate(15%, 15%) scale(1.2); }
-    100% { transform: translate(-10%, -10%) scale(0.8); }
-}
-
-.content_area {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #000;
-}
-
-.content_area__logo {
-    position: relative;
-    width: 150px;
-    height: 150px;
-}
-
-.content_area__logo img {
-    border-radius: 15px;
-    display: block;
-    left: 0;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    width: 150px;
-    z-index: 3;
-}
-
-
-.content_area__logo:before,
-.content_area__logo:after {
-    border-radius: 15px;
-    content: "";
-    filter: blur(40px);
-    height: 100%;
-    opacity: 0.5;
-    position: absolute;
+.main-container{
     width: 100%;
 }
 
-.content_area__logo::after {
-    animation: back_glow_blue 3s ease infinite;
-    background-color: #0ff;
-    z-index: 1;
+p{
+    font-size: 2vw;;
 }
 
-.content_area__logo::before {
-    animation: back_glow_pink 3s ease infinite;
-    background-color: #a622ff;
-    z-index: 2;
+.one{
+    background-color: black;
+    height: 65%;
 }
 
-/* ======================== */
+.one-cont{
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+ .one-img > img{
+    align-content: stretch;
+    width: 100%;
+ }
+
+ .topnav {
+    width: 50%;
+    position: absolute;
+    margin-left: 55%;
+    padding: 1%;
+}
+.topnav > a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 2%;
+    font-size: 1vw;
+    text-decoration: none;
+}
+.topnav > a.active {
+    font-weight: 900;
+    text-decoration: underline;
+    color: rgb(186, 255, 117);
+}
+.topnav > a:hover{
+    color: rgb(90, 195, 90);
+    font-weight: 900;
+}
+
+.one-txt{
+    color: white;
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    padding-top: 22%;
+    padding-left: 10%;
+    font-size: 1.5vw;
+}
+
+.two{
+    height: 120%;
+    background: white;
+}
+.two-cont{
+    height: 90%;
+    width: 80%;
+    display: flex;
+    position: relative; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    padding: 10%;
+    overflow: hidden;
+}
+.two-bx1, .two-bx2, .two-bx3, .two-bx4{
+    flex: 1 1 30%;
+    font-size: 1vw;
+    padding: 4%;
+}
+.two-bx2 > h2{
+    color: orangered;
+    padding-top: 7%;
+
+}
+.two-bx3 > h2{
+    color:  rgb(112, 163, 39);
+    padding-top: 7%;
+}
+.two-bx3 > h2 > p, .two-bx2 > h2 > p{
+    text-align: left;
+}
+.two-bx1, .two-bx4{
+    background-image: url(https://github.com/CodersInHoods/london-pt-fe-030320/blob/master/17-html-css-basics-2-exercise/images/codes-coding-css-1921326.jpg?raw=true);
+    color: rgb(255, 255, 192);
+    text-shadow: 4px 4px 5px rgb(129, 129, 129);
+    padding-top: 7%;
+    font-size: 4vw;
+    text-align: center;
+}
+
+.three{
+    height: 80%;
+    background: rgb(230, 230, 230);
+}
+.three-cont{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 3%;
+    width: 80%;
+    margin-left: 10%;
+}
+.three-head {
+    text-align: center;
+    height: 10%;
+    padding: 1%;
+    font-size: 1.5vw;
+}
+.three-img > img{
+    width: 90%;
+    padding: 4%;
+    margin-left: 5%;
+}
+
+.three-img{
+    width: 30%;
+    background-color: white;
+}
+.three-txt{
+    text-align: left;
+    margin-left: 10%;
+    font-size: 1.5vw;
+}
+
+
+.four{
+    height: 80%;
+    background: white;
+}
+.four-head{
+    text-align: center;
+    height: 8%;
+    font-size: 1.5vw;
+}
+
+.four-cont{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 90%;
+    height: 70%;
+    margin-left: 10%;
+    padding: 5%;
+}
+.four-img > img, .four-img1 > img, .four-img2 > img{
+    max-width: 80%;
+    padding: 1%;
+}
+
+
+.five{
+    height: 30%;
+    background: black;
+}
+.five-cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    width: 99%;
+    padding: 3%;
+}
+.five-head{
+    width:30%;
+    margin-left: 5%;
+    font-size: 1vw;
+}
+.five-head >img {
+    padding: 3%;
+    width: 15%;
+}
+.five-p{
+    margin-right: 10%;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 100;
+}
