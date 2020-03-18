@@ -20,7 +20,7 @@ p{
     align-items: flex-start;
 }
  .one-img > img{
-    align-content: stretch;
+    align-content: cover;
     width: 100%;
  }
 
@@ -59,9 +59,6 @@ p{
 }
 
 
-
-
-
 .two{
     height: 120%;
     background: white;
@@ -85,22 +82,22 @@ p{
 }
 .two-html-p > h2{
     color: orangered;
-    padding-top: 15%;
+    padding: 20% 0 20% 0;
+    margin-left: 9%;
     text-align: center;
     font-size: 3vw;
 }
 .two-css-p > h2{
     color:  rgb(112, 163, 39);
-    padding-top: 15%;
+    padding: 20% 0 20% 0;
     text-align: center;
     font-size: 3vw;
 }
 .two-html-p > p, .two-css-p > p{
     padding: 15%;
+    margin-top: -35%;
     font-size: 1.5vw;
 }
-
-
 .two-html-head, .two-css-head{
     color: white;
     text-shadow: 1vw 1vw 1vw rgb(70, 70, 70);
@@ -117,6 +114,11 @@ p{
     margin-top: -30%;
     width: 42%;
 }
+.two-css-head > img{
+    margin-top: 20%;
+    margin-left: 3%;
+}
+
 
 .three{
     height: 80%;
@@ -126,14 +128,14 @@ p{
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding: 3%;
+    padding: 4%;
     width: 80%;
     margin-left: 10%;
 }
 .three-head {
     text-align: center;
     height: 10%;
-    padding: 1%;
+    padding-top: 5%;
     font-size: 1.5vw;
 }
 .three-img > img{
@@ -141,10 +143,10 @@ p{
     padding: 4%;
     margin-left: 5%;
 }
-
 .three-img{
     width: 30%;
     background-color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2);;
 }
 .three-txt{
     text-align: left;
@@ -161,6 +163,7 @@ p{
     text-align: center;
     height: 8%;
     font-size: 1.5vw;
+    margin: 7% 0 -4% 0;
 }
 .four-cont{
     display: flex;
@@ -172,8 +175,22 @@ p{
     padding: 5%;
 }
 .four-img > img, .four-img1 > img, .four-img2 > img{
-    max-width: 80%;
+    width: 80%;
     padding: 1%;
+}
+.four-img-box{
+    position: absolute;
+    margin: 0;
+}
+.four-img-txt{
+    background-color:rgba(128, 128, 128, 0.614);
+    opacity: 100%;
+    color: white;
+    font-size: 3vw;
+    width: 21%;
+    position: absolute;
+    padding: 6%;
+    margin: 0;
 }
 
 
