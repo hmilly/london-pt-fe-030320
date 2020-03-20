@@ -49,7 +49,7 @@ describe("pandaIndex", () => {
 	});
 
 	test("pandaIndex should be correct panda index", () => {
-		expect(pandaIndex).toEqual(2);
+		expect(pandaIndex).toEqual(5);
 	});
 });
 

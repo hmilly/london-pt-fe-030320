@@ -2,7 +2,7 @@
  * create an array "carBrands"
  * and assign to it ["Mercedes", "Volvo", "BMW", "Reno", "Vauxhall"]
  */
-
+let carBrands = ["Mercedes", "Volvo", "BMW", "Reno", "Vauxhall"];
 /**
  * Exercise 1
  *
@@ -10,7 +10,7 @@
  *
  * * PS: console.log() the result to see the difference
  */
-
+console.log(carBrands.pop());
 /**
  * Exercise 2
  *
@@ -18,7 +18,7 @@
  *
  * * PS: console.log() the result to see the difference
  */
-
+console.log(carBrands.shift());
 /**
  * Exercise 3
  *
@@ -26,7 +26,7 @@
  *
  * * PS: console.log() the result to see the difference
  */
-
+console.log(carBrands.slice(console.log(carBrands.shift(carBrands.indexOf("Vauxhall"), 1))));
 /**
  * Exercise 4
  *
@@ -34,3 +34,4 @@
  *
  * * PS: console.log() the result to see the difference
  */
+carBrands.push("Rolls-Royce");

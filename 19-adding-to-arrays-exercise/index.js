@@ -1,7 +1,7 @@
 /**
  * create an array "animals" with "cat"
  */
-
+let animals = ["cat"];
 /**
  * Exercise 1
  *
@@ -9,7 +9,7 @@
  * 
  * PS: console.log() the result to see the difference
  */
-
+console.log(animals.push("dog"));
 
 /**
  * Exercise 2
@@ -18,7 +18,7 @@
  * 
  * PS: console.log() the result to see the difference
  */
-
+console.log(animals.unshift("rabbit"));
 
 /**
  * Exercise 3
@@ -27,16 +27,16 @@
  * 
  * PS: console.log() the result to see the difference
  */
-
+console.log(animals.splice(1, 0, "puma"));
 
 /**
  * create an array "wildAnimals" with "lion"
  */
-
+let wildAnimals = ["lion"];
 /**
- * create an array "wildAnimals" with "giraffe" and "elephant"
+ * create an array "moreWildAnimals" with "giraffe" and "elephant"
  */
-
+let moreWildAnimals = ["giraffe", "elephant"];
 /**
  * Exercise 4
  *
@@ -45,3 +45,4 @@
  * 
  * PS: console.log() the result to see the difference
  */
+let combinedWildAnimals = [...wildAnimals, ...moreWildAnimals];
