@@ -1,6 +1,7 @@
+
 /**
  * create an array "carBrands"
- * and assign to it ["Mercedes", "Volvo", "BMW", "Reno", "Vauxhall"]
+ * and assign to it ["Mercedes", "Volvo", "BMW", "Reno", "Vauxhall", "Land Rover"]
  */
 let carBrands = ["Mercedes", "Volvo", "BMW", "Reno", "Vauxhall"];
 /**
@@ -30,8 +31,10 @@ console.log(carBrands.slice(console.log(carBrands.shift(carBrands.indexOf("Vauxh
 /**
  * Exercise 4
  *
- * in "carBrands" replace Citroen with Rolls-Royce
+ * in "carBrands" replace BMW with Rolls-Royce
  *
  * * PS: console.log() the result to see the difference
  */
-carBrands.push("Rolls-Royce");
+
+carBrands.shift()
+console.log(carBrands.push("Rolls-Royce"));
