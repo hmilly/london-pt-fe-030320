@@ -75,8 +75,12 @@ const forLowestNumber = [5, 234, 96, 34, -34, 0, 23]; // DON'T TOUCH THIS LINE :
  * from {forLowestNumber}
  */
 function lowestNumber(){
-  forLowestNumber.sort();
-  return forLowestNumber[0];   
-    
+let lowest = forLowestNumber[0];
+  for (var i = 1; i < forLowestNumber.length; i++){
+    if (lowest >  forLowestNumber[i]){
+      lowest = forLowestNumber[i];
+    }
+  }
+    return lowest;
 }
 console.log(lowestNumber());

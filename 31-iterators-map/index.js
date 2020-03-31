@@ -9,8 +9,10 @@
  * array of numbers, convert all negatives to positives and return
  * a new array.
  */
-
-/**
+convertToPositive = (arr) => arr
+  .map(num => num >= 0 ? num : -num);
+  console.log(convertToPositive([2, 0, -1, -3, 5, 9]));
+/**,, 
  * Exercise 2
  *
  * create an arrow function {getAllNames} which will take
@@ -22,14 +24,19 @@
  *   {name: 'John', age: 25}
  * ]) will return ['Alex', 'John']
  */
-
+getAllNames = (obj) => {
+  let names = [];
+  obj.map(item => names.push(item.name));
+  return names;
+}
 /**
  * Exercise 3
  *
  * create a function {greetAll} that takes array of names as a parameter
  * and return a new array of greetings "Hi, {name}!"
  */
-
+greetAll = (arr) => arr.map(name => `Hi, ${name}!`);
+console.log(greetAll(["Trace", "John"]));
 /**
  * Exercise 4
  *
@@ -37,3 +44,9 @@
  * and multiply all numbers inside array by 5 and return the whole array
  * with multiplied numbers
  */
+multiplyAllNumbers = (arr) => {
+  let newArr = [];
+  arr.map(item => typeof item === "number" ? newArr.push(item * 5) : newArr.push(item))
+  return newArr;
+}
+console.log(multiplyAllNumbers([2, 1, 3, 5, 9]));
