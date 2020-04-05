@@ -47,7 +47,7 @@ const countries = [
  *
  * NOTE: You need to add option to go back, to main menu
  */
-chooseBook = (books, index) => {
+const chooseBook = (books, index) => {
 	index = readlineSync.keyInSelect(books, 'Which book would you like to select?');
 	console.log(`${index + 1}: ${books}`);
 	user.book = chooseBook[index];
@@ -65,7 +65,7 @@ chooseBook = (books, index) => {
  *
  * NOTE: You need to add option to "go back", to main menu
  */
-chooseMovie = (movies, index) => {
+const chooseMovie = (movies, index) => {
 	 index = readlineSync.keyInSelect(movies, 'Which Movie would you like to select?');
 	console.log(`${index + 1}: ${movies}`);
 	user.movie = chooseMovie[index];
@@ -79,7 +79,7 @@ chooseMovie = (movies, index) => {
  *
  * NOTE: You need to add option to go back, to main menu
  */
-chooseDest = (countries, index) => {
+const chooseDest = (countries, index) => {
 	console.log(`${index + 1}: ${countries}`);
 	index = readlineSync.keyInSelect(countries, 'Which country would you like to select?');
 	console.log(`${index + 1}: ${movies}`);
@@ -96,7 +96,7 @@ chooseDest = (countries, index) => {
 
 const topMenu = ["Books", "Movies", "Next destination"];
 
-function chooseMenu() {
+const  chooseMenu = () => {
   topMenu.forEach((topMenu, index) => {
     console.log(`${index + 1}: ${topMenu}`);
   });

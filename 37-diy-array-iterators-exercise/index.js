@@ -8,7 +8,12 @@
  * passed each element and the index.
  *
  */
-
+let forEach = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    const el = arr[i];
+    cb(el, i);
+  }
+};
 /**
  * Exercise #2
  *
@@ -22,6 +27,15 @@
  * time the callback was invoked.
  *
  */
+let map = (arr, cb) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    const val = cb(el, i);
+    newArr.push(val);
+  }
+  return newArr;
+};
 
 /**
  * Exercise #3
@@ -36,6 +50,16 @@
  * callback returned a truthy value.
  *
  */
+let filter = (arr, cb) => {
+  const newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    const el = arr[i];
+    if (cb(el, i)) {
+      newArray.push(el);
+    }
+  }
+  return newArray;
+};
 
 /**
  * Exercise #4
@@ -51,6 +75,15 @@
  *
  */
 
+let find = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    const el = arr[i];
+    if (cb(el, i)) {
+      return el;
+    }
+  }
+};
+
 /**
  * Exercise #5
  *
@@ -64,6 +97,14 @@
  * callback returns a truthy value.
  *
  */
+let findIndex = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    const el = arr[i];
+    if (cb(el, i)) {
+      return i;
+    }
+  }
+};
 
 /**
  * Exercise #6
@@ -79,22 +120,44 @@
  * a truthy value.
  *
  */
+let every = (arr, cb) => {
+  let result = true;
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    if (!cb(el, i)) {
+      result = false;
+      break;
+    }
+  }
+  return result;
+};
 
 /**
- * Exercise #7
- *
- * some(array, callback)
- *
- * The callback is invoked for every
- * element in the array and is passed
- * each element and the index. The
- * function returns a boolean value
- * representing if _any_ time the
- * callback was invoked it returned
- * a truthy value.
- *
- */
+* Exercise #7
+*
 
+* some(array, callback)
+*
+* The callback is invoked for every
+* element in the array and is passed
+* each element and the index. The
+* function returns a boolean value
+* representing if _any_ time the
+* callback was invoked it returned
+* a truthy value.
+*
+*/
+let some = (arr, cb) => {
+  let result = false;
+  for (i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    if (cb(el, i)) {
+      result = true;
+      break;
+    }
+  }
+  return result;
+};
 /**
  * Exercise #8
  *
@@ -116,3 +179,10 @@
  * value.
  *
  */
+let reduce = (arr, cb, intVal) => {
+  let acc = intVal === undefined ? 0 : intVal;
+  for (let i = 0; i < arr.length; i++){
+    acc = cb(acc, arr[i], i);
+  } 
+  return acc;
+};

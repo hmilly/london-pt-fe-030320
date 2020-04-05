@@ -6,7 +6,7 @@
  * param it should use default value for name which 
  * should be 'incognito'
  */
-sayHi = (name = "incognito") => `Hi, ${name}!`;
+const sayHi = (name = "incognito") => `Hi, ${name}!`;
 console.log(sayHi("Hol"));
 /**
 * Exercise 2
@@ -17,7 +17,7 @@ console.log(sayHi("Hol"));
 * It you don't pass 1 or both params it should use 1 as 
 * a default value/values
 */
-multiply = (a = 1, b = 1) => a * b ;
+const multiply = (a = 1, b = 1) => a * b ;
 console.log(multiply(5));
 /**
 * Exercise 3
@@ -26,7 +26,7 @@ console.log(multiply(5));
 * pass any array, default value of your param should be 
 * array that contains only one element - string with value "Nothing to log"
 */
-logElements = (arr = ["Nothing to log"]) => arr.map(item => console.log(item));
+const logElements = (arr = ["Nothing to log"]) => arr.map(item => console.log(item));
 console.log(logElements([2, 5, "Hi"]));
 /**
 * Exercise 4
@@ -35,7 +35,7 @@ console.log(logElements([2, 5, "Hi"]));
 * Default value of the param should be object with property name,
 * and value "John Smith"
 */
-getUserName = (propName = {name : "John Smith"}) => {
+const getUserName = (propName = {name : "John Smith"}) => {
   for (let item in propName){
    return`${propName[item]}`
   }

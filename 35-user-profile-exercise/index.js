@@ -1,5 +1,5 @@
 // install and  import "readline-sync" npm package before you do exercises
-var readlineSync = require('readline-sync');
+const readlineSync = require('readline-sync');
 
 const user = {};
 /**

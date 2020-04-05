@@ -1,11 +1,11 @@
 // install and  import "readline-sync" npm package before you do exercises
-var readlineSync = require('readline-sync');
+const readlineSync = require('readline-sync');
 /**
  * Exercise 1
  *
  * ask user for a name and assign a response to variable {name}
  */
-var userName = readlineSync.question('May I have your name? ');
+const userName = readlineSync.question('May I have your name? ');
 console.log('Hi ' + userName + '!');
 
 //===== DO NOT TOUCH THIS BLOCK =====
@@ -28,8 +28,8 @@ console.log("=====================");
  */
 
 
-symbol = ['/', '*', '-', '+'];
-index = readlineSync.keyInSelect(symbol, 'Which equation would you like to use? divide: /, times: *, minus: -, plus: + ?');
+const symbol = ['/', '*', '-', '+'];
+const index = readlineSync.keyInSelect(symbol, 'Which equation would you like to use? divide: /, times: *, minus: -, plus: + ?');
 console.log('Working out answer with: ' + symbol[index]);
 
 /**
@@ -40,7 +40,7 @@ console.log('Working out answer with: ' + symbol[index]);
  * NOTE: if the user will respond with wrong value, ask again, until
  * you get a number
  */
-number1 = readlineSync.keyIn('What will the first number be? ',
+const number1 = readlineSync.keyIn('What will the first number be? ',
   {limit: '$<1-9>'});
   console.log(number1)
 /**
@@ -51,7 +51,7 @@ number1 = readlineSync.keyIn('What will the first number be? ',
  * NOTE: if the user will respond with wrong value, ask again, until
  * you get a number
  */
-number2 = readlineSync.keyIn('What will the second number be? ',
+const number2 = readlineSync.keyIn('What will the second number be? ',
   {limit: '$<1-9>'});
   console.log(number2)
 /**
@@ -65,6 +65,6 @@ number2 = readlineSync.keyIn('What will the second number be? ',
  * 
  */
 
-let result = eval(`${number1} ${symbol[index]} ${number2}`);
+const result = eval(`${number1} ${symbol[index]} ${number2}`);
 console.log("=====================");
 console.log(`Here you go, the result is ${result}`);

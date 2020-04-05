@@ -24,7 +24,7 @@ console.log(user.lastName);
  * 2 params, first - property name and second - property value
  * and set a new property for 'user' object
  */
-function addANewProperty(propName, propValue){
-  return user[propName] = propValue;
+const addANewProperty = (propName, propValue) =>{
+  user[propName] = propValue;
 }
   console.log(addANewProperty("age", 20));

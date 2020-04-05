@@ -31,7 +31,7 @@ console.log(renderBlueText("hello"));
  * Call this function and run "node index.js" in a terminal
  * to see the result
  */
-inversedColourText = (str) => {
+const inversedColourText = (str) => {
   console.log(chalk.inverse(str));
 }
 console.log(inversedColourText("hello"));
@@ -42,7 +42,7 @@ console.log(inversedColourText("hello"));
  * and style each by adding red background colour and setting
  * font colour to white.
  */
-styledText = (arr) => {
+const styledText = (arr) => {
   console.log(chalk.bgRed.white(arr));
 }
 console.log(styledText(["hello", "!"]));

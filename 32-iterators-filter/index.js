@@ -4,7 +4,7 @@
  * create a function {noStrings} that takes an array
  * as a parameter and return an array but without strings
  */
-noStrings = (arr) => {
+const noStrings = (arr) => {
   let newArr = [];
     arr.filter(item => {
       if (typeof item !== "string") newArr.push(item);
@@ -18,7 +18,7 @@ noStrings = (arr) => {
  * as a parameter and return an array of strings by removing
  * every other type
  */
-justStrings = (arr) => {
+const justStrings = (arr) => {
   let newArr = [];
     arr.filter(item => {
       if (typeof item === "string") newArr.push(item);
@@ -32,7 +32,7 @@ justStrings = (arr) => {
  * an array as a parameter and return an array of strings
  * that are longer than 5 characters
  */
-justStringsLongerThan5 = (arr) => arr
+const justStringsLongerThan5 = (arr) => arr
 .filter(item => item.length > 5);
 /**
  * Exercise 4
@@ -41,7 +41,7 @@ justStringsLongerThan5 = (arr) => arr
  * an array as a parameter and return an array of numbers
  * that are more than 13
  */
-numbersMoreThan13 = (arr) => arr
+const numbersMoreThan13 = (arr) => arr
 .filter(num => num > 13);
 /**
  * Exercise 5
@@ -49,7 +49,7 @@ numbersMoreThan13 = (arr) => arr
  * create a function {objectsOnly} that takes
  * an array as a parameter and return an array of objects
  */
-objectsOnly = (arr) => {
+const objectsOnly = (arr) => {
   let newArr = [];
     arr.filter(item => {
       if (typeof item === "object") newArr.push(item);
@@ -63,7 +63,7 @@ objectsOnly = (arr) => {
  * an array as a parameter and return an array of truthy values.
  * IMPORTANT: You still need to keep number 0.
  */
-truthyOnly = (arr) => {
+const truthyOnly = (arr) => {
   let newArr = [];
     arr.filter(item => {
       if (item === 0 || item) newArr.push(item);

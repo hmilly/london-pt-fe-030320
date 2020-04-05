@@ -25,11 +25,11 @@
  * and with forEach log every element from your array
  * use {forEachCallback} as a callback function for forEach
  */
-forEachCallback = (log) =>  console.log(log); 
+const forEachCallback = (log) =>  console.log(log); 
 console.log(forEachCallback("hi"));
 
 
-logAllWithExternalCallback = (arr) => arr.forEach(forEachCallback);
+const logAllWithExternalCallback = (arr) => arr.forEach(forEachCallback);
 
 
 /* =========================== */
@@ -41,7 +41,7 @@ logAllWithExternalCallback = (arr) => arr.forEach(forEachCallback);
  * do same thing as {logAllWithExternalCallback} but with
  * anonymous callback
  */
-logAllWithAnonymousCallback = (arr) => arr
+const logAllWithAnonymousCallback = (arr) => arr
   .forEach(val => console.log(val)); 
 /**
  * Exercise 2
@@ -55,7 +55,7 @@ logAllWithAnonymousCallback = (arr) => arr
  *
  * Ex: dividableBy3([3,7,9,11]) => return [3,9]
  */
-dividableBy3 = (arr) => {
+const dividableBy3 = (arr) => {
   let newArr = [];
     arr.forEach(num => {
       if (num % 3 === 0) newArr.push(num);
@@ -70,7 +70,7 @@ dividableBy3 = (arr) => {
  *
  * Use forEach to loop through the array.
  */
-oddNumbersSum = (arr) => {
+const oddNumbersSum = (arr) => {
     let newArr = [];
       arr.forEach(num => {
         if (num % 2 !== 0) newArr.push(num);
@@ -90,7 +90,7 @@ console.log(oddNumbersSum([2, 3, 5, 6, 7, 8, 9]));
  *
  * Ex: ["cat", 5, "dog"] => 6
  */
-totalLength = (arr) => {
+const totalLength = (arr) => {
   let totLen = 0;
     arr.forEach(str => {
       if (typeof str === "string") totLen += str.length;
