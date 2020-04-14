@@ -125,8 +125,7 @@ let submitFormHandler = () => {
     );
     console.log(obj);
   });
-};
-submitFormHandler();
+}
 /**
  * Exercise 11
  *

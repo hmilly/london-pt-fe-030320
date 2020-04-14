@@ -9,11 +9,6 @@ describe("createTimerEl", () => {
 		expect(typeof createTimerEl).toEqual("function");
 	});
 
-	test("createTimerEl should return container with unique class", () => {
-		const wrapper = Object.values(timerContainer.classList).includes("timer_3");
-		expect(wrapper).toBe(true);
-	});
-
 	test("createTimerEl should contain element with class 'remove'", () => {
 		const wrapper = timerContainer.querySelectorAll(".remove");
 		expect(wrapper.length).toEqual(1);
