@@ -1,8 +1,7 @@
-//Hi, I think I passed all the tests on this one, but some don' work! Thanks!
+//Hi, I think I passed all the tests on this one, 3 in the middle werent passing Thanks!
 
 const productsContainer = document.querySelector("#products");
 let count = 0;
-let zero = -0.00;
 let budget = document.querySelector("#remaining > span").innerText.slice(1)
 
 for (let i in products) {
