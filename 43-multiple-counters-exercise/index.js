@@ -1,58 +1,63 @@
-//Hi, I think I passed all the tests on this one, but some don' work! Thanks!
+// i passed all tests on my pc. My laptop says I fail some though.. (had uploaded wrong test in this one earlier, whoops)
 
-const productsContainer = document.querySelector("#products");
-let count = 0;
-let zero = -0.00;
-let budget = document.querySelector("#remaining > span").innerText.slice(1)
 
-for (let i in products) {
+let addCounterEl = document.querySelector("#new_timer");
+const timersContainerEl = document.querySelector(".timers");
+let timersCount = 0;
+let arr = [];
+
+let createTimerEl = () => {
+  let sec = 0;
+  let mili = 0;
+  let time = 0;
+  //add div timer elem
   let container = document.createElement("div");
-  let img = document.createElement("img")
-  img.src = `${products[i].img}`;
-  container.appendChild(img)
-
-  let h3 = document.createElement("h3")
-  h3.innerText = `${products[i].name}`;
+  container.className = `timer`;
+  container.classList.add(`timer_${timersCount}`);
+  //add div remove elem
+  let divRemove = document.createElement("div");
+  divRemove.className = `remove`;
+  // listener added to remove timers and update count
+  divRemove.addEventListener("click", (e) => {
+    timersCount--;
+    e.target.parentNode.remove();
+    arr.splice(e.target, 1);
+  });
+  container.appendChild(divRemove);
+  //add h3 and span elem
+  let h3 = document.createElement("h3");
+  h3.innerHTML = `${sec} <span>${mili}</span>`;
   container.appendChild(h3);
-
-  let p = document.createElement("p")
-  p.innerText = `${products[i].price}`
-  container.appendChild(p);
-
-  let select = document.createElement("select")
-  select.id = `${products[i].id}`;
-
-  select.addEventListener("change", (e) => {
-    console.log(e.target.value)
-    let money = (budget -= e.target.value).toFixed(2);
-    if (money <= 0) {
-      e.target.disabled = true;
-      let times = () => {
-        let rem = document.querySelector("#remaining")
-        let cont = document.createElement("div");
-        cont.className = `error`;
-        cont.innerText = "Not enough money left for that!"
-        rem.appendChild(cont)}
-      setTimeout(times(), 3000)
-    } else {
-      let moneyDiv = document.querySelector("#remaining > span")
-      moneyDiv.innerText = `£${money}`
-    }
-  })
-  container.appendChild(select);
-
-  let option = document.createElement("option")
-  option.innerText = `${count++}`
-  select.appendChild(option)
-
-  while (products[i].max_quantity !== 0) {
-    let opt = document.createElement("option")
-    opt.innerText = `${count++}`;
-    opt.value = ((count - 1) * products[i].price).toFixed(2);
-    select.appendChild(opt)
-    products[i].max_quantity--;
+  //add div button container
+  let divButtonCont = document.createElement("div");
+  divButtonCont.className = `btn`;
+  container.appendChild(divButtonCont);
+  // add reset button event listerner that resets time to 0 when clicked
+  let btnReset = document.createElement("button");
+  btnReset.className = "reset";
+  btnReset.innerText = "Reset";
+  btnReset.addEventListener("click", () => (time = 0));
+  divButtonCont.appendChild(btnReset);
+  //add stop button and event listerner that stops timer when clicked
+  let btnStop = document.createElement("button");
+  btnStop.className = "stop";
+  btnStop.innerText = "Stop";
+  btnStop.addEventListener("click", () => clearInterval(int));
+  divButtonCont.appendChild(btnStop);
+  //add timer with immediate start time!
+  let int = setInterval(() => {
+    time++;
+    sec = Math.floor(time / 100);
+    mili = time % 100;
+    h3.innerHTML = `${sec} <span>${mili}</span>`;
+  }, 10);
+  //if OVER 5 timers max stop adding.
+  if (timersCount < 6 || arr.length < 5) {
+    arr.push(timersContainerEl.appendChild(container));
+    return container;
   }
-
-  productsContainer.appendChild(container);
-  count = 0;
-}
+};
+//when clicked, new timer created.
+addCounterEl.addEventListener("click", () => {
+  createTimerEl(timersCount++);
+});
