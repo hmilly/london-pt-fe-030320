@@ -2,8 +2,7 @@
 
 const productsContainer = document.querySelector("#products");
 let count = 0;
-let budget = document.querySelector("#remaining > span").innerText;
-let money = budget.slice(1);
+let costs = { 1: 0, 2: 0, 3: 0, 4: 0 }
 
 for (let i in products) {
   let container = document.createElement("div");
@@ -24,19 +23,26 @@ for (let i in products) {
 
   select.addEventListener("change", (e) => {
     let moneyDiv = document.querySelector("#remaining > span");
-    console.log(e.target.value);
-    money = (money -= e.target.value).toFixed(2);
-    moneyDiv.innerText = `£${money}`;
-    if (money <= 0) {
-      e.target.disabled = true;
+    costs[e.target.id] = Number(e.target.value);
+    let tot = 0
+    for (let i in costs) {
+      tot += costs[i]
+    }
+    budget = 50.00;
+    budget -= tot
+    budget = budget.toFixed(2)
+    moneyDiv.innerText = `£${budget}`;
+    if (budget < 0) {
       let connectingDiv = document.querySelector("#remaining");
+      budget = (Number(budget) + Number(e.target.value)).toFixed(2);
+      e.target.value = 0
+      costs[e.target.id] = Number(e.target.value)
+      moneyDiv.innerText = `£${budget}`;
+      let cont = document.createElement("div");
       setTimeout(() => {
-        let cont = document.createElement("div");
         cont.className = `error`;
         cont.innerText = "Not enough money left for that!";
         connectingDiv.appendChild(cont);
-        money = (Number(e.target.value) + Number(money)).toFixed(2);
-        moneyDiv.innerText = `£${money}`;
         setTimeout(() => {
           let newDiv = document.querySelector(".error");
           connectingDiv.removeChild(newDiv);
