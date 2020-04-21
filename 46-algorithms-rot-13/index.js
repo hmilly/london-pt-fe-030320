@@ -1,20 +1,14 @@
-
 let str = document.querySelector("textarea")
 let en = document.querySelector("#encrypt")
 let de = document.querySelector("#decrypt")
 let result = document.querySelector(".result")
 
-
-let txt;
 en.addEventListener("click", () => {
-    txt = str.value
     result.innerHTML = `${rotr(txt)}`
 })
 
 de.addEventListener("click", () => {
-    txt = str.value
     result.innerHTML = `${rotr(txt)}`
-
 })
 
 let rotr = (str) => {
@@ -30,7 +24,5 @@ let rotr = (str) => {
             newStr += l
         }
     })
-
-    txt = newStr;
     return newStr
 }
