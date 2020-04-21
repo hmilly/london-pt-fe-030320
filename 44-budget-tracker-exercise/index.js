@@ -1,5 +1,3 @@
-//Hi, I think I defo passed number 2 3 and 4 but not passing in my console.. Thanks 
-
 const productsContainer = document.querySelector("#products");
 let count = 0;
 let costs = { 1: 0, 2: 0, 3: 0, 4: 0 }
