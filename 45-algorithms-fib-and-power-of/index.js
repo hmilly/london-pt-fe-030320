@@ -23,7 +23,7 @@ let generateFibonacci = (len) => {
 console.log(generateFibonacci(7));
 
 
-
+// generate power of prime and  number
 
 
 let isPowerOf = (num, prime) => {

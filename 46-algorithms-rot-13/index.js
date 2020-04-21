@@ -12,8 +12,8 @@ en.addEventListener("click", () => {
 })
 
 de.addEventListener("click", () => {
-        //   result.innerHTML = `${rotr(txt)}`    ---- this line works in browser, cant get past your test, it is only doing half the word. Dont know why!
-        result.innerHTML = 'Some random text needs to be decrypted!'
+    txt = str.value
+    result.innerHTML = `${rotr(txt)}`
 
 })
 

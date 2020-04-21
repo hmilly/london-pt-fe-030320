@@ -18,7 +18,7 @@ for (let i in products) {
 
   let select = document.createElement("select");
   select.id = `${products[i].id}`;
-
+//
   select.addEventListener("change", (e) => {
     let moneyDiv = document.querySelector("#remaining > span");
     costs[e.target.id] = Number(e.target.value);
@@ -48,6 +48,7 @@ for (let i in products) {
       }, 2000);
     }
   });
+  //
   container.appendChild(select);
 
   let option = document.createElement("option");
