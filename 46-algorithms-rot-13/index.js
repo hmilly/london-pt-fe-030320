@@ -4,11 +4,11 @@ let de = document.querySelector("#decrypt")
 let result = document.querySelector(".result")
 
 en.addEventListener("click", () => {
-    result.innerHTML = `${rotr(txt)}`
+    result.innerHTML = `${rotr(str.value)}`
 })
 
 de.addEventListener("click", () => {
-    result.innerHTML = `${rotr(txt)}`
+    result.innerHTML = `${rotr(str.value)}`
 })
 
 let rotr = (str) => {
