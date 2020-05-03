@@ -8,7 +8,9 @@ const ingredients = [
 
 const syncCookIngredient = ({ name, time }) => {
   const start = Date.now();
+
   console.log(`Start cooking ${name}`);
+
   while (start + time > Date.now()) {}
 
   console.log(`${name} cooked!`);
@@ -19,38 +21,56 @@ const syncCookIngredient = ({ name, time }) => {
  *
  * create a function {syncCookMeal} which will recieve an
  * array of {ingredientsToCook}, (similar to the array
- * defined on line 1) and call {syncCookIngredient} 
+ * defined on line 1) and call {syncCookIngredient}
  * for each ingredient in the array
- * 
+ *
  * After all the ingredients are cooked,
  * log the message "Soup is ready to serve"
  */
+let syncCookMeal = (ingredientsToCook) => {
+  ingredientsToCook.forEach((ing) => syncCookIngredient({ ing }));
 
-
+  console.log("Soup is ready to serve");
+};
 
 /**
  * Exercise 2
  *
  * create a function {asyncCookIngredient} which takes 1 argument:
- * 
+ *
  * an {ingredient} object (like the objects in the array on line 1)
  * with 2 keys: name and time.
- * 
+ *
  * Log out the message "Start cooking INGREDIENT_NAME"
  * then after the cooking time has elapsed,
  * log out "INGREDIENT_NAME cooked!". Both times displaying
  * the name of the ingredient.
  *
  */
+let asyncCookIngredient = ({ name, time }) => {
+  console.log(`Start cooking ${name}`);
+
+  setTimeout(() => {
+    console.log(`${name} cooked!`);
+  }, time);
+};
 
 /**
  * Exercise 3
  *
  * create a function {asyncCookMeal} which will which will recieve an
  * array of {ingredientsToCook} and call {asyncCookIngredient} for
- * eahc ingredient
- * 
+ * each ingredient
+ *
  * After all the ingredients are cooked,
- * log the message "Soup is ready to serve"
+ * log the message ""
  */
 
+let asyncCookMeal = (ingredientsToCook) => {
+  new Promise(resolve => {
+    ingredientsToCook.forEach((value, index, arr) => {
+      asyncCookIngredient({value});
+      if (index === arr.length -1) resolve();
+    });
+  }).then(() => console.log("Soup is ready to serve"));
+};
