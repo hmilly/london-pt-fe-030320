@@ -12,6 +12,7 @@
  * Ex: generateFibonacci(5) // return [0, 1, 1, 2, 3];
  */
 
+<<<<<<< HEAD
 
 /**
  * Exercise 2
@@ -25,4 +26,27 @@
  *
  * Ex: isPowerOf(27, 3) // return true;
  */
+=======
+let generateFibonacci = (len) => {
+    let arr = [0, 1];
+    for (let i = 2; i < len; i++) {
+        arr[i] = arr[i - 1] + arr[i - 2];
+    }
+    return len <= 1 ? [0] : arr
+}
+
+console.log(generateFibonacci(7));
+
+
+// generate power of prime and  number
+
+
+let isPowerOf = (num, prime) => {
+    return Math.pow(prime, prime) === num
+}
+
+
+
+
+>>>>>>> 11356319418ea0d56720be8b1335ba54c1fe8b48
 

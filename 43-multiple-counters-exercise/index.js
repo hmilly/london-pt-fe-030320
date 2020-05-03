@@ -1,4 +1,4 @@
-// i passed all tests on my pc. My laptop says I fail some though, not sure why.
+// i passed all tests on my pc. My laptop says I fail some though.. (had uploaded wrong test in this one earlier, whoops)
 
 
 let addCounterEl = document.querySelector("#new_timer");
