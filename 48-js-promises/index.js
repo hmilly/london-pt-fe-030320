@@ -20,7 +20,11 @@ const ingredients = [
  * {ingredient} object
  *
  */
-
+let asyncCookIngredient = ({ name, time }) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve({ name, time }), time)
+  })
+}
 
 /**
  * Exercise 2
@@ -41,3 +45,24 @@ const ingredients = [
  * }
  *
  */
+let asyncCookMeal = (ingredientsToCook) => {
+
+return new Promise((resolve, reject) => {
+  let obj = {ingredientNames : [], totalTime : 0}
+
+  ingredientsToCook.forEach((value, index, arr) => {
+    asyncCookIngredient(value.name, value.time)
+
+      obj.ingredientNames.push(value.name)
+      obj.totalTime += value.time
+
+      console.log(obj)
+
+      setTimeout(() => {
+        if (index === arr.length - 1) resolve(obj);
+      }, value.time)
+
+    })
+  })
+
+}
