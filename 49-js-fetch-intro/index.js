@@ -1,13 +1,12 @@
- 
 const form = document.querySelector("form");
 const result = document.querySelector(".result");
 const input = document.querySelector("input");
 // ================================
- 
+
 // BEFORE YOU START:
 // run `npm install -g serve`
 // then run `serve ./` to serve your index page
- 
+
 /**
  * Exercise 1
  *
@@ -18,30 +17,26 @@ const input = document.querySelector("input");
  * in {result} element, otherwise render
  * `Request failed with status code: {errorCode}`
  */
- 
+
 input.addEventListener("focus", () => {
-    input.value = "";
-    result.innerText = "";
-})
- 
+  input.value = "";
+  result.innerText = "";
+});
+
 form.addEventListener("submit", () => {
-    getResponse(input.value)
-})
- 
- 
+  getResponse(input.value);
+});
+
 let getResponse = (url) => {
-    fetch(url)
-        .then(response => {
-            if (response.ok) {
-                result.innerHTML = `Valid link! ${url}`
-            } else {
-                result.innerText = `Request failed with status code: ${response.status}`;
-            }
-        })
-}
- 
- 
- 
+  fetch(url).then((response) => {
+    if (response.ok) {
+      result.innerHTML = `Valid link! <a href="${url}" target="_blank"></a>`;
+    } else {
+      result.innerText = `Request failed with status code: ${response.status}`;
+    }
+  });
+};
+
 /**
  * Description of the application:
  *
@@ -55,5 +50,3 @@ let getResponse = (url) => {
  * 5. When I focus on input, it should clear my input and hide
  * {result}
  */
- 
-
