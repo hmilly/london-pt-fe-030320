@@ -5,7 +5,7 @@ const ingredients = [
   { name: "celery", time: 150 },
   { name: "tomato", time: 100 },
 ];
-
+ 
 /**
  * Exercise 1
  *
@@ -21,14 +21,13 @@ const ingredients = [
  *
  */
 let asyncCookIngredient = ({ name, time }) => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => resolve({ name, time }), time)
   })
 }
-
+ 
 /**
  * Exercise 2
- *
  * create a function {asyncCookMeal} which will recieve an
  * array of {ingredientsToCook} and call {asyncCookIngredient} for
  * each ingredient
@@ -36,33 +35,50 @@ let asyncCookIngredient = ({ name, time }) => {
  * Return a promise which gets resolved after all of the
  * ingredients are cooked
  *
- * The value used to resolve the promise should be and object
+ * The value used to resolve the promise should be an object
  * containing an array of {ingredientNames} and the {totalTime}:
- *
  * {
  *  ingredientNames: ["carrot", "onion"],
  *  totalTime: 750
  * }
- *
- */
-let asyncCookMeal = (ingredientsToCook) => {
-
-return new Promise((resolve, reject) => {
-  let obj = {ingredientNames : [], totalTime : 0}
-
-  ingredientsToCook.forEach((value, index, arr) => {
-    asyncCookIngredient(value.name, value.time)
-
+ * 
+ * 
+ * let asyncCookMeal = (ingredientsToCook) => {
+ 
+  return new Promise((resolve, reject) => {
+    let obj = { ingredientNames: [], totalTime: 0 }
+ 
+    ingredientsToCook.forEach((value, index, arr) => {
+ 
+      asyncCookIngredient(value.name, value.time)
+ 
       obj.ingredientNames.push(value.name)
       obj.totalTime += value.time
-
-      console.log(obj)
-
+ 
       setTimeout(() => {
         if (index === arr.length - 1) resolve(obj);
       }, value.time)
-
+ 
     })
   })
-
 }
+ * 
+ * 
+ */
+ 
+let asyncCookMeal = async (ingredientsToCook) => {
+ 
+  let obj = { ingredientNames: [], totalTime: 0 };
+ 
+  await Promise.all(ingredientsToCook
+    .map(async ingredient => await asyncCookIngredient(ingredient)))
+    .then(p => p
+      .map(item => {
+        obj.ingredientNames.push(item.name);
+        obj.totalTime += item.time;
+      }))
+ 
+  return obj
+};
+ 
+
