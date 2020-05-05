@@ -28,7 +28,7 @@ const syncCookIngredient = ({ name, time }) => {
  * log the message "Soup is ready to serve"
  */
 let syncCookMeal = (ingredientsToCook) => {
-  ingredientsToCook.forEach((ing) => syncCookIngredient({ ing }));
+  ingredientsToCook.map((ing) => syncCookIngredient({ ing }));
 
   console.log("Soup is ready to serve");
 };
@@ -47,12 +47,11 @@ let syncCookMeal = (ingredientsToCook) => {
  * the name of the ingredient.
  *
  */
-let asyncCookIngredient = ({ name, time }) => {
+const asyncCookIngredient = ({ name, time }) => {
   console.log(`Start cooking ${name}`);
-
-  setTimeout(() => {
-    console.log(`${name} cooked!`);
-  }, time);
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(console.log(`${name} cooked!`)), time);
+  });
 };
 
 /**
@@ -67,10 +66,7 @@ let asyncCookIngredient = ({ name, time }) => {
  */
 
 let asyncCookMeal = (ingredientsToCook) => {
-  new Promise(resolve => {
-    ingredientsToCook.forEach((value, index, arr) => {
-      asyncCookIngredient({value});
-      if (index === arr.length -1) resolve();
-    });
-  }).then(() => console.log("Soup is ready to serve"));
+  return Promise.all(
+    ingredientsToCook.map((i) => asyncCookIngredient(i))
+  ).then(() => console.log("Soup is ready to serve"));
 };
