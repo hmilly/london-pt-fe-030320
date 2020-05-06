@@ -17,7 +17,20 @@ const input = document.querySelector("input");
  * When you receive a response, render the
  * string in {.result} element
  */
+input.addEventListener("focus", () => {
+  input.value = "";
+  result.innerText = "";
+});
 
+form.addEventListener("submit", () => {
+  getResponse(input.value);
+});
+
+let getResponse = (url) => {
+  fetch(url)
+  .then(response => response.text())
+  .then(text => result.innerText = text)
+  }
 
 /**
  * Description of the application:
@@ -25,6 +38,5 @@ const input = document.querySelector("input");
  * As a user I should be able to:
  * 1. provide a URL in the input field and submit it
  * 2. see the body of the response in {.result} element
- * 3. focus on input, clearing my previous input and hiding {.result} element
+    * 3. focus on input, clearing my previous input and hiding {.result} element
  */
-
