@@ -28,14 +28,13 @@ form.addEventListener("submit", () => {
 });
 
 let getResponse = (url) => {
-  fetch(url).then((response) => {
-    if (response.ok) {
-      result.innerHTML = `Valid link! <a href="${url}" target="_blank"></a>`;
-    } else {
-      result.innerText = `Request failed with status code: ${response.status}`;
-    }
-  });
+  fetch(url).then(response =>
+    (response.ok)
+      ? result.innerHTML = `Valid link! <a href="${url}" target="_blank">Here</a>`
+      : result.innerText = `Request failed with status code: ${response.status}`
+  )
 };
+
 
 /**
  * Description of the application:
