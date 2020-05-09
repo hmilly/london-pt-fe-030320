@@ -28,9 +28,9 @@ form.addEventListener("submit", () => {
 
 let getResponse = (url) => {
   fetch(url)
-  .then(response => response.text())
-  .then(text => result.innerText = text)
-  }
+    .then(response => response.text())
+    .then(text => result.innerText = text);
+};
 
 /**
  * Description of the application:
@@ -38,5 +38,5 @@ let getResponse = (url) => {
  * As a user I should be able to:
  * 1. provide a URL in the input field and submit it
  * 2. see the body of the response in {.result} element
-    * 3. focus on input, clearing my previous input and hiding {.result} element
+ * 3. focus on input, clearing my previous input and hiding {.result} element
  */
