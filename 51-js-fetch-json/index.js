@@ -37,8 +37,7 @@ const input = document.querySelector("input");
 
 button.addEventListener("click", async () => {
     let facts = await fetchData("https://cat-fact.herokuapp.com/facts")
-    let factsArr = [];
-    facts.map(item => factsArr.push(item.text))
+    let factsArr = facts.map(item => item.text)
     factsArr.sort(() => 0.5 - Math.random()).slice(0, 3);
     result.innerHTML = `<li>${factsArr[0]}</li><li>${factsArr[1]}</li><li>${factsArr[2]}</li>`;
 })
