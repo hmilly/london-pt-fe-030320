@@ -18,7 +18,11 @@ const baseURL = "http://localhost:3000";
  *
  * Note: test this function with an URL from your json-server API
  */
+let getComments = async () => {
+    return await fetch(`${baseURL}/comments`).then(res => res.json())
+}
 
+getComments()
 /**
  * Exercise 2
  *
@@ -30,6 +34,19 @@ const baseURL = "http://localhost:3000";
  *
  * Don't forget to handle errors.
  */
+let postComment = async (newComment) => {
+    const configObject = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify(newComment),
+    };
+
+    return await fetch(`${baseURL}/comments`, configObject)
+    .then(res => (res.ok) ? res.json() : "Oops something went wrong!")
+}
 
 /**
  * Exercise 3
@@ -45,6 +62,19 @@ const baseURL = "http://localhost:3000";
  *
  * Don't forget to handle errors.
  */
+let patchComment = async (comment, newCommentBody) => {
+    const configObject = {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify({body : newCommentBody}),
+    };
+
+    return await fetch(`${baseURL}/comments/${comment.id}`, configObject)
+    .then(res => (res.ok) ? res.json() : "Oops we couldn't update that!")
+}
 
 /**
  * Exercise 4
@@ -57,6 +87,19 @@ const baseURL = "http://localhost:3000";
  *
  * Don't forget to handle errors.
  */
+let putComment = async (comment) => {
+    const configObject = {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify(comment),
+    };
+
+    return await fetch(`${baseURL}/comments/${comment.id}`, configObject)
+    .then(res => (res.ok) ? res.json() : "Oops we couldn't update that!")
+}
 
 /**
  * Exercise 5
@@ -68,3 +111,16 @@ const baseURL = "http://localhost:3000";
  *
  * Don't forget to handle errors.
  */
+let deleteComment = async (comment) => {
+    const configObject = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify(comment),
+    };
+
+    return await fetch(`${baseURL}/comments/${comment.id}`, configObject)
+    .then(res => (res.ok) ? "Deleted!" : "That could not be deleted!")
+}
