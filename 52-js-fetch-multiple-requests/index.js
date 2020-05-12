@@ -23,27 +23,12 @@ const getLinks = async () => {
 
 let matches = (item) => {
   let li = document.createElement("li");
-  let pname = document.createElement("p");
-  let pgender = document.createElement("p");
-  let plife = document.createElement("p");
-  let pculture = document.createElement("p");
-
-  pname.innerText = item.name;
-  pgender.innerText = item.gender;
-  plife.innerText = item.born;
-  pculture.innerText = item.culture;
-
-  pname.className = "name";
-  pgender.className = "gender";
-  plife.className = "life";
-  pculture.className = "culture";
-
-  li.append(pname);
-  li.append(pgender);
-  li.append(plife);
-  li.append(pculture);
-
-  resultEl.append(li);
+  li.innerHTML =
+    `<p class="name">${item.name}</p>
+    <p class="life">${item.born} – ${item.died}</p>
+    <p class="gender"><strong>Gender: </strong>${item.gender}</p>
+    <p class="culture"><strong>Culture: </strong>${item.culture}</p> `
+   resultEl.append(li);
 };
 
 searchEl.addEventListener("keydown", async (a) => {
