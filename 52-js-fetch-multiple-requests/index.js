@@ -38,7 +38,6 @@ searchEl.addEventListener("keyup", async (a) => {
 /**
  *
  * REQUIREMENTS:
- *
  * 1. I should be able to see all {swornMembers}
  * after the page has loaded.
  * 2. When I type a query inside the input it should only
