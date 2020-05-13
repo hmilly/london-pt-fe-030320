@@ -19,7 +19,7 @@ const baseURL = "http://localhost:3000";
  * Note: test this function with an URL from your json-server API
  */
 let getComments = async () => {
-    return await fetch(`${baseURL}/comments`).then(res => res.json())
+    return await fetch(`${baseURL}/comments`).then(res => res.json()).catch(error => error)
 }
 
 getComments()
@@ -45,7 +45,7 @@ let postComment = async (newComment) => {
     };
 
     return await fetch(`${baseURL}/comments`, configObject)
-    .then(res => (res.ok) ? res.json() : "Oops something went wrong!")
+        .then(res => (res.ok) ? res.json() : "Oops something went wrong!").catch(error => error)
 }
 
 /**
@@ -69,11 +69,11 @@ let patchComment = async (comment, newCommentBody) => {
             "Content-Type": "application/json",
             Accept: "application/json",
         },
-        body: JSON.stringify({body : newCommentBody}),
+        body: JSON.stringify({ body: newCommentBody }),
     };
 
     return await fetch(`${baseURL}/comments/${comment.id}`, configObject)
-    .then(res => (res.ok) ? res.json() : "Oops we couldn't update that!")
+        .then(res => (res.ok) ? res.json() : "Oops we couldn't update that!").catch(error => error)
 }
 
 /**
@@ -98,7 +98,7 @@ let putComment = async (comment) => {
     };
 
     return await fetch(`${baseURL}/comments/${comment.id}`, configObject)
-    .then(res => (res.ok) ? res.json() : "Oops we couldn't update that!")
+        .then(res => (res.ok) ? res.json() : "Oops we couldn't update that!").catch(error => error)
 }
 
 /**
@@ -122,5 +122,5 @@ let deleteComment = async (comment) => {
     };
 
     return await fetch(`${baseURL}/comments/${comment.id}`, configObject)
-    .then(res => (res.ok) ? "Deleted!" : "That could not be deleted!")
+        .then(res => (res.ok) ? "Deleted!" : "That could not be deleted!").catch(error => error)
 }
