@@ -3,6 +3,7 @@ import "./App.css";
 
 const APP_TITLE = "Awesome Pet Shop";
 
+
 /**
  * Exercise: 1
  *
@@ -17,7 +18,17 @@ const APP_TITLE = "Awesome Pet Shop";
 const App = () => {
   const animals = ["cat", "dog", "giraffe", "pig", "lion", "rabbit"];
 
-  return <div className="app"></div>;
-};
+  return (<div className="app">
+    <h1>{APP_TITLE}</h1>
+    <p>02/06/2020</p>
+    <ul>
+      {animals.map((item) => (
+       <li key={item}>{item}</li> 
+      ))}
+    </ul>
+
+  </div>
+  )}
 
 export default App;
+

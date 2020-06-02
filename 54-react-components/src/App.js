@@ -1,14 +1,11 @@
 import React from "react";
 import "./App.css";
 
-import Header from "./Header.css";
-import Nav from "./Nav.css";
-import Content from "./Content.css";
-import Form from "./Form.css";
-import Footer from  "./Footer.css";
-
-
-
+import Header from "./header";
+import Navigation from "./navigation";
+import Content from "./content";
+import Form from "./form";
+import Footer from "./footer";
 
 /**
  * Exercises:
@@ -23,13 +20,15 @@ import Footer from  "./Footer.css";
  */
 
 function App() {
-	return <div className="App">
-	<Header />
-	<Nav />
-	<Content />
-	<Form />
-	<Footer />
-	</div>
+  return (
+    <div className="App">
+      <Navigation />
+      <Header />
+      <Content />
+      <Form />
+      <Footer />
+    </div>
+  );
 }
-export default App;
 
+export default App;

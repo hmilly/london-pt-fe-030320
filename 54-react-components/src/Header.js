@@ -1,4 +1,7 @@
 import React from "react";
-import "./Header.css";
 
-<Header /> 
+const Header = () => {
+  return <header id="header"><h1>Teatime</h1></header>;
+};
+
+export default Header;
