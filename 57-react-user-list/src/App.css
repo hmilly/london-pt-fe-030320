@@ -1,0 +1,74 @@
+.body {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+.adduserbtn {
+  padding: 2%;
+}
+.newUser {
+  display: inline-block;
+  border: solid grey 1px;
+  border-radius: 10px;
+  color: brown;
+  background: rgb(255, 196, 222);
+  background: linear-gradient(
+    29deg,
+    rgba(255, 196, 222, 1) 0%,
+    rgba(170, 170, 170, 1) 100%,
+    rgba(244, 244, 244, 1) 225%
+  );
+  padding: 2% 5%;
+  font-size: xx-large;
+  font-weight: 500;
+}
+.newUser:hover {
+  background-color: rgb(248, 214, 150);
+  border: ridge rgba(153, 205, 50, 0.598) 4px;
+  cursor: pointer;
+  color: rgb(111, 29, 29);
+}
+.userBody {
+  display: block;
+}
+.user {
+  display: inline-block;
+  border-radius: 20px;
+  width: 30%;
+  margin: 1%;
+  border: black solid 3px;
+  background: rgb(26, 22, 106);
+  background: linear-gradient(
+    29deg,
+    rgba(26, 22, 106, 1) 0%,
+    rgba(46, 46, 177, 1) 21%,
+    rgba(27, 179, 210, 1) 100%
+  );
+  color: rgb(53, 53, 53);
+}
+.userName {
+  color: black;
+  position: relative;
+  font-size: 1.1em;
+  text-align: center;
+}
+.btndiv {
+  display: block;
+  padding: 4%;
+}
+.userImg {
+  position: relative;
+  width: 50%;
+  border-radius: 5px;
+}
+.removeUser {
+  position: relative;
+  width: 40%;
+  font-size: 100%;
+  font-weight: 700;
+  padding: 2%;
+  border: black solid 1px;
+  border-radius: 4px;
+  cursor: pointer;
+}
