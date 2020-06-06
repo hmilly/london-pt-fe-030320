@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 /**
@@ -18,10 +18,45 @@ import "./App.css";
  */
 
 const App = () => {
-	return (
-		<div className="App">
-		</div>
-	);
+  const [contacts, setContacts] = useState([]);
+  const [selectedContacts, setSelectedContacts] = useState("");
+
+  const contUrl =  "http://localhost:3000/contacts"
+
+  if (contacts.length === 0) {
+    fetch(contUrl)
+      .then((res) => res.json())
+      .then((res) => setContacts(res));
+  }
+
+  const handleChange = (e) => {
+    setSelectedContacts(e.target.value);
+  };
+
+  const ruser =
+    selectedContacts === ""
+      ? contacts
+      : contacts.filter((u) =>
+          u.name.toLowerCase().match(selectedContacts.toLowerCase())
+        );
+
+  return (
+    <div className="App">
+      <div>
+        <label>Filter</label>
+        <input name="company" type="text" onChange={handleChange}></input>
+      </div>
+
+      <ul>
+        {ruser.map((item) => (
+          <li key={item.id}>
+            <p>{item.name}</p>
+            <p className="company">{item.company}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default App;
