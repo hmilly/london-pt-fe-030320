@@ -56,7 +56,7 @@ const UserForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (user.firstName && user.lastName && user.gender !== "" ){
+    if (user.firstName && user.lastName && user.gender && user.age !==  ""){
       postUser(user);
     }
     
