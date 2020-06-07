@@ -16,7 +16,7 @@ const APP_TITLE = "Awesome Pet Shop";
 
 const TodaysDate = () => {
   const todayObj = new Date();
-  let day = todayObj.getDay();
+  let day = todayObj.getDate();
   let month = todayObj.getMonth() + 1;
   const year = todayObj.getFullYear();
 

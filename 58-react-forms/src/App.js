@@ -36,16 +36,18 @@ const App = () => {
   const handleChange = (event) => setinputText(event.target.value);
 
   return (
-    <div className="firstForm">
+    <div className="formDiv">
       <h1 className="currentState">{inputText}</h1>
-      <form>
+      <form className="firstInputs">
         <input
           className="first"
+          placeholder="First Input"
           value={inputText}
           onChange={handleChange}
         ></input>
         <input
           className="second"
+          placeholder="Second Input"
           value={inputText}
           onChange={handleChange}
         ></input>

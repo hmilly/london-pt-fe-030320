@@ -1,0 +1,19 @@
+
+.card {
+  display: inline-block;
+  border: rgb(253, 235, 33) double 4px;
+  width: 310px;
+  margin: .5%;
+  text-align: center;
+ 
+}
+.card:nth-child(even){
+  background-color: rgba(47, 78, 57, 0.646)
+}
+.card:nth-child(odd){
+  background-color: rgba(47, 78, 78, 0.843)
+}
+.name, .email{
+  color: blanchedalmond;
+  font-weight: 600;
+}

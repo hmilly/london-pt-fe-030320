@@ -1,0 +1,46 @@
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#root{
+  background-color: crimson;
+  display: block;
+  padding: 2%;
+}
+.formDiv{
+width: 90%;
+display: block;
+padding: 2%;
+}
+
+.currentState{
+background-color: rgba(238, 37, 77, 0.762);
+border-radius: 5px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3%;
+  display: block
+}
+
+.state, .firstInputs{
+  padding: 2%;
+  background-color: rgba(128, 0, 128, 0.272);
+  border-radius: 5px;
+}
+
+.firstName, .lastName, .age, .gender, .submit, .firstInputs >input{
+  margin: 1%;
+  border-radius: 5px;
+  border: red solid 1px;
+}
+
+.first, .second, .firstName, .lastName, .age, .gender{
+  width: 90%;
+  display: block;
+  padding: 1%;
+  font-size: medium;
+}
+.submit{
+  background-color: seashell;
+  cursor: pointer;
+}
