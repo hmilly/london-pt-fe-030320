@@ -15,23 +15,23 @@ import UserCard from "./components/UserCard/UserCard";
 let dbUrl = "http://localhost:3000/contacts";
 
 const App = () => {
-  const [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([]);
 
-  if (users.length === 0) {
-    fetch(dbUrl)
-      .then((res) => res.json())
-      .then((res) => 
-        setUsers(res)
-      );
-  }
+    if (users.length === 0) {
+        fetch(dbUrl)
+            .then((res) => res.json())
+            .then((res) =>
+                setUsers(res)
+            );
+    }
 
-  return (
-    <div clas="app">
-      {users.map((user, i) => (
-        <UserCard user={user} key={i} />
-      ))}
-    </div>
-  );
+    return (
+        <div className="app"> {
+            users.map((user, i) => (
+                <UserCard user={user} key={i} />
+            ))}
+        </div>)
+
 };
 
 export default App;

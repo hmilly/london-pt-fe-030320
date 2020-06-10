@@ -11,3 +11,12 @@ ul {
     padding: 0;
     list-style: none;
 }
+
+li {
+    border: black solid 1px;
+    padding: 2%;
+}
+span, p{
+    display: block;
+}
+

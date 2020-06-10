@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
+import TeamRender from "./components/Team/Team";
+//import TeamRender from "./components/Team/Team";
 
 /**
  * Exercise:
@@ -36,7 +38,56 @@ const App = () => {
     "Mat",
   ]);
 
-  return <div className="app"></div>;
+
+  //   const setTeamOne = (player) => {
+  //     [...player, setPlayers],
+  //       setProps(<Team props={player} />);
+  //   <Team player={players} />
+  //   }
+  //   const setTeamTwo = (player) => {
+  //     [...player, setPlayers],
+  //       setProps(<Team player={player} />);
+  //   }
+  // 
+
+
+  const [team1, setteam1] = useState([])
+  const [team2, setteam2] = useState([])
+
+  const removePlayer = (name) => {
+    const filterPlayer = players.filter(n => n !== name)
+    setPlayers(filterPlayer)
+  }
+
+
+  const clickedTeam1 = (e) => {
+    const playerName = e.target.value
+    setteam1([...team1, playerName])
+    removePlayer(playerName)
+  }
+
+  const clickedTeam2 = (e) => {
+    const playerName = e.target.value
+    setteam2([...team2, playerName])
+    removePlayer(playerName)
+  }
+
+
+  return (
+    <div className="app">
+      <ul className="players">
+        {players.map((p, i) => (
+          <li className="eachPlayer" key={i}>
+            <span>{p}</span>
+            <button onClick={clickedTeam1} value={p}>Team 1</button>
+            <button onClick={clickedTeam2} value={p} >Team 2</button>
+          </li>
+        ))}
+      </ul>
+      <TeamRender players={team1} team="team 1"/>
+      <TeamRender players={team2} team="team 2"/>
+    </div>
+  );
 };
 
 export default App;
