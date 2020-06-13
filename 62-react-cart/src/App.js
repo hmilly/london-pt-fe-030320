@@ -4,6 +4,7 @@ import "./App.css";
 import Store from "./components/Store/Store";
 import Cart from "./components/Cart/Cart";
 
+
 const initialStock = [
   {
     id: 1,
@@ -27,11 +28,55 @@ const initialStock = [
   },
 ];
 
+
 const App = () => {
   const [stock, setStock] = useState([...initialStock]);
   const [cart, setCart] = useState([]);
 
-  return <div className="app">App</div>;
+  const addToCart = (selectedItem, selectedQuantity) => {
+    const ifFound = cart.find(items =>
+      selectedItem.id === items.id)
+
+    if (ifFound) {
+      ifFound.quantity += selectedQuantity
+      return setCart([...cart])
+    } else {
+      setCart([...cart, {
+        id: selectedItem.id,
+        name: selectedItem.name,
+        quantity: selectedQuantity
+      }])
+    }
+
+    stock.map(item => {
+      if (item.name === selectedItem.name) {
+        return item.quantity = selectedItem.quantity - selectedQuantity
+      }
+    })
+   return setStock([...stock])
+  }
+
+  const updateItem = (selectedItem, selectedQuantity) => {
+    const ifFound = cart.find(items =>
+      selectedItem.id === items.id)
+
+    if (ifFound) {
+      ifFound.quantity -= selectedQuantity
+      return setCart([...cart])
+    }
+    
+    stock.map(item => {
+      if (item.name === selectedItem.name) 
+       return item.quantity += selectedQuantity
+    })
+    return setStock([...stock])
+  }
+
+  return (
+    <div className="app">
+      <Store stock={stock} addToCart={addToCart} />
+      <Cart cart={cart} updateItem={updateItem} />
+    </div>)
 };
 
 export default App;

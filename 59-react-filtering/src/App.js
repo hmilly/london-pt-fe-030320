@@ -26,7 +26,8 @@ const App = () => {
   if (contacts.length === 0) {
     fetch(contUrl)
       .then((res) => res.json())
-      .then((res) => setContacts(res));
+      .then((res) => setContacts(res))
+      .catch(error => console.log(error))
   }
 
   const handleChange = (e) => {

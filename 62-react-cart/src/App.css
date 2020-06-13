@@ -1,15 +1,38 @@
 .app {
-    max-width: 30em;
-    margin: auto;
+    width: 50%;
+    min-width: 550px;
+    margin: 0 auto;
     padding: 1em;
     border: grey solid 1px;
     background: white;
+    
 }
 
-ul > li > span {
-    width: 6em;
+ul > li {
+    display: block;
+    height: 30px;
+}
+
+ul > li > p{
+    margin: 0 auto;
+    width: 30%;
     display: inline-block;
 }
-ul > li > input {
-    width: 4em;
+
+
+ul > li > form{
+    display: inline-block;
+    width: 60%;
 }
+
+ul > li > form > input{
+    width: 50px;
+    margin-right: 2px;
+}
+.label{
+    color: red;
+    display: inline;
+    margin-left: 3%;
+    font-size: small;
+}
+

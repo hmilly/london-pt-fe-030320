@@ -20,9 +20,8 @@ const App = () => {
     if (users.length === 0) {
         fetch(dbUrl)
             .then((res) => res.json())
-            .then((res) =>
-                setUsers(res)
-            );
+            .then((res) => setUsers(res))
+            .catch(err => console.log(err));
     }
 
     return (

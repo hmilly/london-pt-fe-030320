@@ -20,10 +20,9 @@ const TodaysDate = () => {
   let month = todayObj.getMonth() + 1;
   const year = todayObj.getFullYear();
 
-  if (month < 10) month = `0${month}`;
-  if (day < 10) day = `0${day}`;
 
-  const today = `${day}/${month}/${year}`;
+
+  const today = `${month}/${day}/${year}`;
   return <p className="date">{today}</p>;
 };
 

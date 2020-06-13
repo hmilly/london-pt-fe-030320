@@ -39,18 +39,6 @@ const App = () => {
   ]);
 
 
-  //   const setTeamOne = (player) => {
-  //     [...player, setPlayers],
-  //       setProps(<Team props={player} />);
-  //   <Team player={players} />
-  //   }
-  //   const setTeamTwo = (player) => {
-  //     [...player, setPlayers],
-  //       setProps(<Team player={player} />);
-  //   }
-  // 
-
-
   const [team1, setteam1] = useState([])
   const [team2, setteam2] = useState([])
 
