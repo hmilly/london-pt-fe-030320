@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 
 // cart / item folder
-
-
 const Item = ({item, updateItem}) => {
 
 const [inputValue, setInputValue] = useState("0");
@@ -14,13 +12,9 @@ const handleChange = (e) => {
 
 const setval = (e) => {
   e.preventDefault();
-
-  if (inputValue !== 0) { 
-    updateItem(item, parseInt(inputValue))
-    setInputValue("0")
-  } 
+  updateItem(item, parseInt(inputValue))
+  setInputValue("0")
 }
-
 
   return (
     <li>
