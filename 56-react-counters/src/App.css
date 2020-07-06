@@ -1,0 +1,47 @@
+
+.newCounter{
+  display: block;
+  padding: 2;
+  margin: 2% auto;
+  background-color: rgb(155, 100, 207);
+  color: rgb(74, 255, 255);
+  font-weight: 600;
+  border-radius: 5px;
+
+}
+.app{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.counter{
+  display: inline-block;
+  border-radius: 5px;
+  width: 23%;
+  margin: 2%;
+  border: rgb(68, 0, 131) double 5px;
+  background-color: rgb(74, 134, 255);
+  color: rgb(53, 53, 53);
+}
+h1{
+  margin: 0;
+  font-size: 100%;
+  text-align: center;
+}
+.btndiv{
+  display: block;
+  margin: 0 auto;
+}
+
+.inc, .dec{
+  display: inline-block;
+  font-size: 100%;
+  font-weight: 700;
+  width: 25%;
+  padding: 2%;
+  border: blue solid 1px;
+  border-radius: 4px;
+  margin: 12%;
+}

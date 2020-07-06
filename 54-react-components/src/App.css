@@ -1,0 +1,55 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.app{
+  display: flex;
+}
+
+header{
+  text-align: center;
+  font-size: 40px;
+}
+
+form{
+  margin: 0 auto;
+  width: 70%;
+  padding:3%;
+  text-align: center;
+}
+
+input {
+  margin: 4%;
+  padding: 2%;
+}
+
+fieldset{
+  border-radius: 5px;
+  border: blueviolet solid 1px;
+  color: blue;
+}
+
+p{
+  width: 80%;
+  margin: 0 auto;
+  padding: 4%;
+}
+
+ul{
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+li{
+  display: inline-block;
+  margin: 2%;
+  padding: 3%;
+}
+
+
+
+#footer > li{
+  padding-bottom: 0;
+  border-bottom: rgba(100, 237, 171, 0.768) solid 3px;
+}

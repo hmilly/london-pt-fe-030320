@@ -1,0 +1,121 @@
+
+.login-box{
+    background: rgb(36,36,36);
+background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
+    color: white;
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+.login-head{
+    border-bottom: orangered solid 1px;
+}
+p{
+    text-align: right;
+    margin: 6%;
+}
+.login-box{
+    display: block;
+    margin: 8% auto;
+}
+.login-body{
+    margin: 5% 18%;
+}
+label, input, button{
+    display: block;
+    margin: 5% auto;
+    width: 98%;
+}
+
+input{
+color: white;
+ border: none;
+ border-bottom: orangered solid 1px;
+ background-color: rgba(36, 36, 36, 0);
+outline: none;
+}
+
+button{
+    border-radius: 5px;
+    border: grey solid 1px;
+    background-color: grey;
+    color: white;
+    font-weight: 700;
+    padding: 3%;
+    cursor: pointer;
+}
+button:active, button:hover{
+ background-color: orangered;
+}
+.su-login{
+    background-color: orangered;
+    border: orangered solid 1px;
+}
+.signup{
+    text-align: center;
+padding: 2%;
+align-self: center;
+    color: orangered;
+    cursor: pointer;
+    text-decoration: none;
+}
+.signup:hover{
+ text-decoration: underline;
+}
+.signup:active, .signup:visited{
+    color: orangered;
+}
+
+
+
+.uploadDiv{
+    position: relative;
+    padding: 4% 0;
+    width: 100%;
+}
+
+.uploadbtndiv{
+    display: inline-block;
+    width: 40%;
+    height: auto;
+}
+
+   input[type="file"] {
+    font-size: 11px;
+    display: inline-block;
+    width: 40%;
+    height: 53%;
+opacity: 0;
+border: red solid 2px;
+    position: absolute;
+    left: 0;
+    top: 25%;
+    text-align: right;
+    cursor: pointer;
+  }
+  .filep{
+    text-align: center;
+    font-size: 14px;
+    top: -50px;
+  }
+
+  .uploadbtn {
+    background-color: orangered;
+    border: orangered solid 1px;
+    width: 90%;
+    font-size: 12px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .uploadimgdiv{
+    display: inline-block;
+    width: 30%;
+    margin-left: 20%;
+    margin-top: -7%
+}
+  .usersimgchoice{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}

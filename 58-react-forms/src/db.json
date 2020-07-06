@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "firstName": "Test",
+      "lastName": " User",
+      "age": 0,
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "firstName": "Test",
+      "lastName": " User",
+      "age": 0,
+      "gender": "male",
+      "id": 2
+    }
+  ]
+}

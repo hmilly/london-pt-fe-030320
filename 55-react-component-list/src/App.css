@@ -1,0 +1,26 @@
+.app{
+  margin: 10%;
+  text-align: center;
+  background: lightgrey;
+  font-family: 'Lucida Sans Unicode', sans-serif;
+  }
+  .app > h1{
+  text-decoration: underline;
+  background: rgba(160, 158, 158, 0.245);
+  }
+  .date{
+    text-align: right;
+    font-size: larger;
+  }
+  .app > ul{
+    text-align: left;
+    background-color: rgba(38, 167, 247, 0.524);
+    border-top: rgb(12, 6, 2) double 1px;
+  }
+  .app > ul > li{
+    color: rgb(64, 32, 181);
+    list-style-type: square;
+    margin: .5%;
+    padding: .5%;
+    background-color: rgba(33, 102, 199, 0.122);
+  }

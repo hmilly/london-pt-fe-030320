@@ -1,0 +1,22 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(36,36,36);
+    background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
+}
+.ch{
+    width: 6%;
+    height: 2%;
+    margin: 1%;
+}
+
+.txt{
+    color: white;
+    width: 25%;
+}
+.txt p{
+    height: 40%;
+    text-align: right;
+    margin: 8% 10% 0 0;
+} 
