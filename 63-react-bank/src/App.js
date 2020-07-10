@@ -1,12 +1,13 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
 
-import Lsheader from "./pages/headers/lsheader";
-import Mainheader from "./pages/headers/mainheader";
-import LoginPage from "./pages/login/loginpage"
-import Signup from "./pages/login/signup";
-import Wallet_body from "./pages/main-body/wallet_body";
+import LoginPage from "./pages/login/Loginpage"
+import Signup from "./pages/login/Signup";
+import Wallet from "./pages/main-body/Wallet";
+import Savings from "./pages/main-body/Savings";
+import Loans from "./pages/main-body/Loans";
+import Transactions from "./pages/main-body/Transactions";
 
 
 
@@ -15,13 +16,16 @@ function App() {
 
 	return (
 		<>
+			<div className="App">
+				<Switch>
+					<Route>
 
-				{(LoginPage || Signup) ? <Lsheader/> : <Mainheader/>}
-				<div className="App">
-		<Route path="/login" component={LoginPage} />
+					</Route>
+				</Switch>
 
-				</div>
-
+				<Loans />
+				<Transactions />
+			</div>
 		</>
 	)
 }

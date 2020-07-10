@@ -1,0 +1,54 @@
+.transactions_main{
+    display: flex;
+    flex-direction: column;
+    background: rgb(36,36,36);
+    background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
+    color: white;
+    align-self: center;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 4%;
+    width: 40%;
+}
+
+.tran_header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 8%;
+    padding: 2% 0;
+    border-bottom: rgba(128, 128, 128, 0.39) solid 1px;
+}
+
+.tran_txt{
+    display: inline-block;
+    margin: 1%;
+}
+.tran_amount{
+    display: inline-block;
+    margin: 1%;
+}
+
+.transactions{
+    margin: 2% 8%;
+}
+
+.transaction1{
+    display: flex;
+    justify-content: space-between;
+    margin: 4% 0;
+}
+
+.companyname{
+    margin: 0;
+}
+.paymentinfo{
+    display: flex;
+}
+
+.paymentinfo img{
+    margin: 0 1%;
+}
+.paymentinfo h5{
+    margin: 0;
+
+}

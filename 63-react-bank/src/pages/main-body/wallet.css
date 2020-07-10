@@ -1,0 +1,83 @@
+.account{
+    display: flex;
+    background: rgb(36,36,36);
+    background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
+    color: white;
+    align-self: center;
+    justify-content: space-between;
+    height: auto;
+    border-radius: 10px;
+    margin: 4%;
+    width: 40%;
+}
+
+.walletbalance{
+    width: 100%;
+    margin: 2%;
+    border-left: tomato solid 5px;
+    border-radius: 2px;
+}
+.savingsbalance{
+    width: 100%;
+    margin: 2%;
+    border-left: limegreen solid 5px;
+    border-radius: 2px;
+}
+.loansbalance{
+    width: 100%;
+    margin: 2%;
+    border-left: turquoise solid 5px;
+    border-radius: 2px;
+}
+
+.balance{
+    display: block;
+    margin: 0 4%;
+    width: 80%;
+    font-size: 50px;
+}
+.pounds{
+    display:  inline-block;
+    margin: 0;
+    font-size:50px;
+}
+.pence{
+    display:  inline-block;
+    margin: 0;
+    width: 20%;
+    font-size: 30px;
+}
+.balanceP{
+    margin: 2% 4%;
+    width: 80%;
+    text-align: left;
+}
+
+.userdate{
+    width: 20%;
+    margin: 2%;
+    text-align: right;
+}
+
+.savingsbuttons{
+    width: 30%;
+    margin: 2%;
+    padding: 3%;
+    text-align: right;
+}
+.in, .out{
+    display: block;
+    font-size: small;
+    margin: 8% 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: limegreen;
+    color: white;
+}
+.out{
+    background-color: grey;
+}
+
+.takeout{
+    background-color: turquoise;
+}
