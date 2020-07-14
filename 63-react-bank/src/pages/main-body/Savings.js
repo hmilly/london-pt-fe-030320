@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Mainheader from "../headers/Mainheader"
 import "./wallet.css"
+import Transactions from "./Transactions"
 
 function Savings(props) {
     return (
@@ -17,6 +17,7 @@ function Savings(props) {
                 <button className="out">PAY OUT</button>
                 </div>
             </div>
+            <Transactions/>
         </>
     )
 }

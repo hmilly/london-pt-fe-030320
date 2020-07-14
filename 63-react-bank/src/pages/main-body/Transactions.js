@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "./transactions.css"
 
 function Loans(props) {

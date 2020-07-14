@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Mainheader from "../headers/Mainheader"
 import "./wallet.css"
 import man1 from "../img/man_1.png"
+import Transactions from "./Transactions"
 
 
 
@@ -31,6 +31,7 @@ function Wallet(props) {
                     <div><p>{today}</p></div>
                 </div>
             </div>
+            <Transactions/>
         </>
     )
 }

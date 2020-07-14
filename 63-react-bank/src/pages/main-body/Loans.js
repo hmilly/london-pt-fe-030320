@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Mainheader from "../headers/Mainheader"
 import "./wallet.css"
+import Transactions from "./Transactions"
 
 function Loans(props) {
     return (
@@ -17,6 +17,7 @@ function Loans(props) {
                 <button className="out payback">PAY BACK</button>
                 </div>
             </div>
+            <Transactions/>
         </>
     )
 }

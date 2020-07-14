@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import man1 from "../img/man_1.png"
 import "./login.css"
 import Lsheader from "../headers/Lsheader";
-import Wallet_body from "../main-body/Wallet"
 
 
 // selectedImg.addEventListener("change", (e) => {
@@ -14,10 +13,9 @@ import Wallet_body from "../main-body/Wallet"
 
 function Signup() {
     return (
-        <Switch>
-        <Route exact path="/main-body/wallet-body" component={Wallet_body} />
+
         <>
-        <Lsheader />
+            <Lsheader />
             <div className="login-box">
                 <div className="login-head"><p>Sign up</p></div>
                 <form className="login-body">
@@ -37,13 +35,15 @@ function Signup() {
                             <button className="uploadbtn">Upload</button>
                         </div>
                         <div className="uploadimgdiv"><img className="usersimgchoice" src={man1} alt="man"></img></div>
-                        
+
                     </div>
-                    <button disabled className="su-login"><Link to="/main-body/wallet-body" >Sign up</Link></button>
+                    <button disabled className="su-login">
+                        <Link to="/wallet" >Sign up</Link>
+                        </button>
                 </form>
             </div>
         </>
-        </Switch>
+
     )
 }
 

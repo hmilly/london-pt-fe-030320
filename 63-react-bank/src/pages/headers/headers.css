@@ -5,22 +5,30 @@
     background: rgb(36,36,36);
     background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
 }
+.headImg{
+    height: 100%;
+}
 .ch{
-
-    width: 6%;
-    height: 60%;
-    margin: 1%;
-    
+    width: 100%;
+    height: auto;
+    margin: 20% 0;
 }
 
 .txt{
     display: flex;
     justify-content: flex-end;
-    color: white;
-    width: 50%;
+    align-items: center;
+    list-style: none;
 }
-.txt p{
+
+li{
     margin: 0 3%;
-    padding: 4% 0;
     font-size: small;
 } 
+.txt a{
+    color: white;
+    text-decoration: none;
+}
+.txt a:hover{
+    color: thistle;
+}

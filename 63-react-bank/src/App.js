@@ -17,14 +17,25 @@ function App() {
 	return (
 		<>
 			<div className="App">
-				<Switch>
-					<Route>
 
+				<Switch>
+					<Route exact path="/">
+						<LoginPage />
+					</Route>
+					<Route path="/signup">
+						<Signup />
+					</Route>
+					<Route path="/wallet">
+						<Wallet />
+					</Route>
+					<Route path="/savings">
+						<Savings />
+					</Route>
+					<Route path="/loans">
+						<Loans />
 					</Route>
 				</Switch>
 
-				<Loans />
-				<Transactions />
 			</div>
 		</>
 	)
