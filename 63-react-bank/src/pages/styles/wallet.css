@@ -4,10 +4,11 @@
     background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
     color: white;
     align-self: center;
-    justify-content: space-between;
-    height: auto;
+    position: absolute;
+    justify-self: space-around;
+    height: 15%;
     border-radius: 10px;
-    margin: 4%;
+    margin-top: 10%;
     width: 40%;
 }
 

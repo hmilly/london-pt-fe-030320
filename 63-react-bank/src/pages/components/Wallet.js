@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import Mainheader from "../headers/Mainheader"
-import "./wallet.css"
+import Mainheader from "./Mainheader"
+import "../styles/wallet.css"
 import man1 from "../img/man_1.png"
 import Transactions from "./Transactions"
-
 
 
 const todayObj = new Date();

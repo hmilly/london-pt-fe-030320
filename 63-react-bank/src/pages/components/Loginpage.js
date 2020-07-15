@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-import "./login.css";
-import Lsheader from "../headers/Lsheader";
+import "../styles/login.css";
+import Loginheader from "./Loginheader";
 
 
 const LoginPage = (props) => {
 
     return (
         <>
-            <Lsheader />
+            <Loginheader />
             <div className="login-box">
                 <div className="login-head"><p>Login</p></div>
                 <form className="login-body">

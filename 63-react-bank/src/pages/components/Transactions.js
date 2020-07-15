@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./transactions.css"
+import "../styles/transactions.css"
 
 function Loans(props) {
     return (

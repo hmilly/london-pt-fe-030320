@@ -1,35 +1,23 @@
 import React, { useState } from 'react'
-import Mainheader from "../headers/Mainheader"
-import "./settings.css"
+import { Link } from "react-router-dom";
+import man1 from "../img/man_1.png"
+import "../styles/login.css"
+import Loginheader from "./Loginheader";
 
 
-function Settings(props) {
+// selectedImg.addEventListener("change", (e) => {
+//     let choice = e.target.files[0];
+//     const sImg = document.querySelector(".userimg");
+//     sImg.src = URL.createObjectURL(choice);
+//   });
+
+function Signup() {
     return (
 
-        <div className="settings">
-
-            <div>
-                <p>-</p>
-                <h2>Settings</h2>
-            </div>
-            <div>
-                <p>Block account</p>
-                <label class="switch">
-                    <input type="checkbox" />
-                    <span class="slider round"></span>
-                </label>
-            </div>
-            <div>
-                <p>Round expenses and
-                    put into savings</p>
-                <label class="switch">
-                    <input type="checkbox" />
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <form>
-                <h4>User</h4>
+        <>
+            <Loginheader />
+            <div className="login-box">
+                <div className="login-head"><p>Sign up</p></div>
                 <form className="login-body">
                     <label htmlFor="firstName">First name</label>
                     <input type="text" name="firstName" ></input>
@@ -53,11 +41,10 @@ function Settings(props) {
                         <Link to="/wallet" >Sign up</Link>
                         </button>
                 </form>
-            </form>
-        </div>
+            </div>
+        </>
+
     )
 }
 
-
-export default Wallet
-
+export default Signup

@@ -4,10 +4,11 @@
     background: rgb(36,36,36);
     background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
     color: white;
+    position: absolute;
     align-self: center;
     height: auto;
     border-radius: 10px;
-    margin: 0 4%;
+    margin-top: 25%;
     width: 40%;
 }
 
@@ -58,4 +59,15 @@
 }
 .paymentinfo h5{
     margin: 0;
+}
+
+/* ------------------   styles for Settings tab -----------------*/
+
+.settings{
+    height: 100%;
+
+    width: 20%;
+    background: rgb(36,36,36);
+    background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
+    
 }
