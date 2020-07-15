@@ -32,10 +32,18 @@
     margin: 2% 8%;
 }
 
-.transaction1{
+.transaction{
     display: flex;
     justify-content: space-between;
     margin: 4% 0;
+    cursor: pointer;
+    padding: 2%;
+}
+
+.transaction:hover{
+    border-radius: 5px;
+    background-color: grey;
+    box-shadow: 3px 5px black;
 }
 
 .companyname{
@@ -50,5 +58,4 @@
 }
 .paymentinfo h5{
     margin: 0;
-
 }

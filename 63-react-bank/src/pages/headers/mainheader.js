@@ -22,7 +22,7 @@ function Mainheader() {
                     <Link>SETTINGS</Link>
                 </li>
                 <li>
-                    <Link>SIGNOUT</Link>
+                    <Link>SIGN OUT</Link>
                 </li>
             </ul>
 

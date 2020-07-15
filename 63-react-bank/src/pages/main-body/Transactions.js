@@ -11,7 +11,7 @@ function Loans(props) {
                 </div>
                 <div className="transactions">
 
-                <div className="transaction1">
+                <div className="transaction one">
                         <h5 className="companyname">Marks and Spencers</h5>
                         <div className="paymentinfo">
                             <img src="" alt="-"></img>
@@ -19,7 +19,7 @@ function Loans(props) {
                         </div>
                     </div>
 
-                    <div className="transaction1">
+                    <div className="transaction two">
                         <h5 className="companyname">Marks and Spencers</h5>
                         <div className="paymentinfo">
                             <img src="" alt="-"></img>

@@ -1,17 +1,14 @@
 
 .header{
     display: flex;
+    height: 7%;
     justify-content: space-between;
     background: rgb(36,36,36);
     background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
 }
-.headImg{
-    height: 100%;
-}
+
 .ch{
-    width: 100%;
-    height: auto;
-    margin: 20% 0;
+    margin: 20% 10%;
 }
 
 .txt{
@@ -25,9 +22,11 @@ li{
     margin: 0 3%;
     font-size: small;
 } 
-.txt a{
+.txt a, .txt p{
+    display: inline-block;
     color: white;
     text-decoration: none;
+    white-space: nowrap;
 }
 .txt a:hover{
     color: thistle;

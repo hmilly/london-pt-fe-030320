@@ -60,7 +60,7 @@
 }
 
 .savingsbuttons{
-    width: 30%;
+    width: 40%;
     margin: 2%;
     padding: 3%;
     text-align: right;
@@ -68,7 +68,7 @@
 .in, .out{
     display: block;
     font-size: small;
-    margin: 8% 0;
+    margin: 10% 0;
     width: 100%;
     border-radius: 5px;
     background-color: limegreen;
