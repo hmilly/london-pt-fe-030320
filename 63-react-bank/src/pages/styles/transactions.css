@@ -54,8 +54,15 @@
     display: flex;
 }
 
-.paymentinfo img{
-    margin: 0 1%;
+.added, .minused{
+    margin: 10%;
+    font-size: smaller;
+}
+.added{
+    color: lawngreen;
+}
+.minused{
+    color: red;
 }
 .paymentinfo h5{
     margin: 0;

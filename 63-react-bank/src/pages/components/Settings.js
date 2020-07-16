@@ -1,36 +1,36 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "../styles/transactions.css"
-import {FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {faArrowLeft } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import SettingsForm from "./SettingsForm"
 
 function Settings(props) {
     return (
-
         <div className="settings">
             <div className="settingsTitle">
-                <Link><FontAwesomeIcon
-                icon={faArrowLeft} /></Link>
+                <a onClick={() => props.setMenu(false)}>
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                </a>
                 <h1>Settings</h1>
             </div>
             <div className="blockacc">
                 <p>Block account</p>
-                <label class="switch">
-                    <input type="checkbox" />
-                    <span class="slider round"></span>
+                <label className="switch">
+                    <input className="checkbox" />
+                    <span className="slider round"></span>
                 </label>
             </div>
             <div className="rounds">
                 <p>Round expenses and
                     put into savings</p>
-                <label class="switch">
+                <label className="switch">
                     <input type="checkbox" />
-                    <span class="slider round"></span>
+                    <span className="slider round"></span>
                 </label>
             </div>
 
-            <SettingsForm/>
+            <SettingsForm />
         </div>
     )
 }

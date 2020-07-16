@@ -7,16 +7,14 @@ import Settings from "./Settings"
 
 
 
-
-
 function Mainheader() {
 
     const [showMenu, setShowMenu] = useState(false)
 
     let menu;
 
-    if (showMenu){
-        menu = <Settings onClick={() => setShowMenu(true)}/>
+    if (showMenu) {
+        menu = <Settings setMenu={setShowMenu} onClick={() => setShowMenu(true)} />
     }
 
     return (
@@ -35,10 +33,10 @@ function Mainheader() {
                         <Link to="/loans">LOANS</Link>
                     </li>
                     <li>
-                        <Link onClick={() => setShowMenu(!showMenu)}>SETTINGS</Link>
+                        <a onClick={() => setShowMenu(!showMenu)}>SETTINGS</a>
                     </li>
                     <li>
-                        <Link>SIGN OUT</Link>
+                        <a>SIGN OUT</a>
                     </li>
                 </ul>
             </div>

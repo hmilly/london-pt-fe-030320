@@ -5,6 +5,9 @@ import man1 from "../img/man_1.png"
 
 
 function SettingsForm() {
+
+    
+
     return (
         <form className="login-body settingslogin">
             <h4 className="user">User</h4>
