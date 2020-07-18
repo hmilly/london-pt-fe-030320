@@ -18,7 +18,6 @@ function App() {
 			<div className="App">
 				<Switch>
 					<Route exact path="/">
-
 						<LoginPage />
 					</Route>
 					<Route path="/signup">

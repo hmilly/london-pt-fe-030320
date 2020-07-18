@@ -28,8 +28,9 @@ li{
     text-decoration: none;
     white-space: nowrap;
 }
-.txt a:hover{
+li a:hover{
     color: thistle;
+    cursor: pointer;
 }
 
 /* ------------------   styles for Settings tab -----------------*/

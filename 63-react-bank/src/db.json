@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Lady",
+      "lastname": "Muck",
+      "email": "lmuck@gmail.com",
+      "password": "fuck",
+      "avator": "",
+      "balance": 100,
+      "Saving_balance": 10000,
+      "Loan_balance": -10.00,
+      "transactions": [
+
+      ],
+      "loan": [
+        
+      ]
+    }
+  ]
+}
