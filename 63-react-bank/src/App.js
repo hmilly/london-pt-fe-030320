@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import "./pages/styles/App.css";
 
@@ -7,30 +7,35 @@ import Signup from "./pages/components/Signup";
 import Wallet from "./pages/components/Wallet";
 import Savings from "./pages/components/Savings";
 import Loans from "./pages/components/Loans";
-import Transactions from "./pages/components/Transactions";
+
 
 
 function App() {
 
+	const [user, setUser] = useState({})
+
+	const updateUser = (user) => {
+		setUser(user)
+	}
 
 	return (
 		<>
 			<div className="App">
 				<Switch>
-					<Route exact path="/">
-						<LoginPage />
+					<Route exact path="/" >
+						<LoginPage updateUser={updateUser} user={user} />
 					</Route>
 					<Route path="/signup">
-						<Signup />
+						<Signup updateUser={updateUser} user={user} />
 					</Route>
 					<Route path="/wallet">
-						<Wallet />
+						<Wallet updateUser={updateUser} user={user} />
 					</Route>
 					<Route path="/savings">
-						<Savings />
+						<Savings updateUser={updateUser} user={user} />
 					</Route>
 					<Route path="/loans">
-						<Loans />
+						<Loans updateUser={updateUser} user={user} />
 					</Route>
 				</Switch>
 

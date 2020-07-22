@@ -10,12 +10,11 @@ import Settings from "./Settings"
 function Mainheader() {
 
     const [showMenu, setShowMenu] = useState(false)
-
     let menu;
-
     if (showMenu) {
         menu = <Settings setMenu={setShowMenu} onClick={() => setShowMenu(true)} />
     }
+
 
     return (
         <>
@@ -36,7 +35,7 @@ function Mainheader() {
                         <a onClick={() => setShowMenu(!showMenu)}>SETTINGS</a>
                     </li>
                     <li>
-                        <a>SIGN OUT</a>
+                    <Link to="/">SIGN OUT</Link>
                     </li>
                 </ul>
             </div>

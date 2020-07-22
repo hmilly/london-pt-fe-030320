@@ -36,7 +36,7 @@
 .transaction{
     display: flex;
     justify-content: space-between;
-    margin: 4% 0;
+    margin: 2% 0;
     cursor: pointer;
     padding: 2%;
 }
@@ -52,16 +52,18 @@
 }
 .paymentinfo{
     display: flex;
+    justify-content: space-around;
+    width: 25%;
 }
 
-.added, .minused{
-    margin: 10%;
+.added, .minus{
+    margin-top: 5%;
     font-size: smaller;
 }
 .added{
     color: lawngreen;
 }
-.minused{
+.minus{
     color: red;
 }
 .paymentinfo h5{
@@ -69,6 +71,7 @@
 }
 
 /* ------------------   styles for Settings tab -----------------*/
+
 
 .settings{
     height: 100%;

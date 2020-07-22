@@ -17,7 +17,7 @@ function Settings(props) {
             <div className="blockacc">
                 <p>Block account</p>
                 <label className="switch">
-                    <input className="checkbox" />
+                    <input type="checkbox" />
                     <span className="slider round"></span>
                 </label>
             </div>

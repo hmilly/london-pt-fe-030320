@@ -1,40 +1,34 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "../styles/transactions.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons"
+import "../styles/transactions.css"
 
-function Transactions(props) {
+
+function Transactions({ user }) {
     return (
         <>
-            <div className="transactions_main">
-                <div className="tran_header">
-                    <p className="tran_txt">Transactions</p>
-                    <p className="tran_amount">Amount</p>
-                </div>
-                <div className="transactions">
+            {user.transactions.map(t => (
+                <div className="transaction">
+                    <h5 className="companyname">{t.transName}</h5>
+                    <div className="paymentinfo">
 
-                    <div className="transaction one">
-                        <h5 className="companyname">Marks and Spencers</h5>
-                        <div className="paymentinfo">
-                            <FontAwesomeIcon
+
+                        {(t.minus) ?
+                            <><FontAwesomeIcon
+                                icon={faMinus}
+                                className="minus" />
+                                <h5>£{t.minus}</h5></>
+                            :
+                            <><FontAwesomeIcon
                                 icon={faPlus}
                                 className="added" />
-                            <h5>£7.51</h5>
-                        </div>
-                    </div>
+                                <h5>£{t.plus}</h5></>}
 
-                    <div className="transaction two">
-                        <h5 className="companyname">Marks and Spencers</h5>
-                        <div className="paymentinfo">
-                            <FontAwesomeIcon
-                                icon={faMinus}
-                                className="minused" />
-                            <h5>£70.51</h5>
-                        </div>
                     </div>
-
                 </div>
-            </div>
+            )
+            )}
         </>
     )
 }

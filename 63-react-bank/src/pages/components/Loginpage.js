@@ -1,28 +1,27 @@
-import React, { useState } from 'react'
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import { useHistory, Link } from "react-router-dom";
 import "../styles/login.css";
 import Loginheader from "./Loginheader";
-import users from "../data"
+import users from "../API"
 
 
-const LoginPage = () => {
-
-    console.log(users)
+const LoginPage = ({updateUser, user}) => {
 
 
-    const [email, setEmail] = useState("")
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value)
-    }
+    const history = useHistory();
+    const [enteredEmail, setEnteredEmail] = useState("")
+    const [enteredPword, setEnteredPword] = useState("")
 
-    const [pword, setPword] = useState("")
-    const handlePChange = (e) => {
-        setPword(e.target.value)
-    }
+    useEffect(() => {
+        users.find(e => { if (e.email === enteredEmail) updateUser(e) })
+    })
+
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (email.toLowerCase() === "lmuck@gmail.com" && pword === "fuck") {
-
+        if (user.email === enteredEmail.toLowerCase() && user.pword === enteredPword) {
+            history.push("/wallet")
+        } else {
+            window.alert("Incorrect details - please sign up!")
         }
     }
 
@@ -33,11 +32,11 @@ const LoginPage = () => {
                 <div className="login-head"><p>Login</p></div>
                 <form className="login-body" onSubmit={handleSubmit} >
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" onChange={handleEmailChange} ></input>
+                    <input type="email" name="email" onChange={(e) => setEnteredEmail(e.target.value)}></input>
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" onChange={handlePChange}></input>
-                    <button>
-                        <Link to="/wallet">Login</Link>
+                    <input type="password" name="password" onChange={(e) => setEnteredPword(e.target.value)}></input>
+                    <button >
+                        Login
                     </button>
                     <div className="signup">
                         <Link to="/signup">Sign up</Link>
