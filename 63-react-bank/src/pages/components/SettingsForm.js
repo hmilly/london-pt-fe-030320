@@ -5,9 +5,6 @@ import man1 from "../img/man_1.png"
 
 
 function SettingsForm() {
-
-    
-
     return (
         <form className="login-body settingslogin">
             <h4 className="user">User</h4>
@@ -27,7 +24,6 @@ function SettingsForm() {
                     <button className="uploadbtn">Upload</button>
                 </div>
                 <div className="uploadimgdiv"><img className="usersimgchoice" src={man1} alt="man"></img></div>
-
             </div>
             <button disabled className="su-login save">
                 <Link to="/wallet" >Save</Link>

@@ -39,11 +39,11 @@ const users = [
 		],
 		loansTran: [
 			{
-				transName: "loans",
+				transName: "loan",
 				plus: 25.44,
 			},
 			{
-				transName: "loans",
+				transName: "loan",
 				minus: 15.80,
 			},
 		],

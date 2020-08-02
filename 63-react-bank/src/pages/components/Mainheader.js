@@ -15,12 +15,10 @@ function Mainheader() {
         menu = <Settings setMenu={setShowMenu} onClick={() => setShowMenu(true)} />
     }
 
-
     return (
         <>
             <div className="header">
                 <div className="headImg"><img src={ch} alt="CH" className="ch"></img></div>
-
                 <ul className="txt">
                     <li>
                         <Link to="/wallet">WALLET</Link>
@@ -35,7 +33,7 @@ function Mainheader() {
                         <a onClick={() => setShowMenu(!showMenu)}>SETTINGS</a>
                     </li>
                     <li>
-                    <Link to="/">SIGN OUT</Link>
+                        <Link to="/">SIGN OUT</Link>
                     </li>
                 </ul>
             </div>

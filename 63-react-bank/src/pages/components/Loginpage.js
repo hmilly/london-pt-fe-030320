@@ -5,9 +5,7 @@ import Loginheader from "./Loginheader";
 import users from "../API"
 
 
-const LoginPage = ({updateUser, user}) => {
-
-
+const LoginPage = ({ updateUser, user }) => {
     const history = useHistory();
     const [enteredEmail, setEnteredEmail] = useState("")
     const [enteredPword, setEnteredPword] = useState("")

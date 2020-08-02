@@ -12,6 +12,14 @@ import Loans from "./pages/components/Loans";
 
 function App() {
 
+	const todayObj = new Date();
+	let day = todayObj.getDate();
+	let month = todayObj.getMonth() + 1;
+	const year = todayObj.getFullYear();
+	if (day < 10) { day = `0${day}` }
+	if (month < 10) { month = `0${month}` }
+	const today = `${day}/${month}/${year}`;
+
 	const [user, setUser] = useState({})
 
 	const updateUser = (user) => {
@@ -29,16 +37,15 @@ function App() {
 						<Signup updateUser={updateUser} user={user} />
 					</Route>
 					<Route path="/wallet">
-						<Wallet user={user} />
+						<Wallet user={user} today={today} />
 					</Route>
 					<Route path="/savings">
-						<Savings user={user} />
+						<Savings user={user} today={today} />
 					</Route>
 					<Route path="/loans">
-						<Loans user={user} />
+						<Loans user={user} today={today} />
 					</Route>
 				</Switch>
-
 			</div>
 		</>
 	)

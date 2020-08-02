@@ -4,21 +4,7 @@ import "../styles/wallet.css"
 import man1 from "../img/man_1.png"
 import Transactions from './Transactions'
 
-const todayObj = new Date();
-let day = todayObj.getDate();
-let month = todayObj.getMonth() + 1;
-const year = todayObj.getFullYear();
-if (day < 10) { day = `0${day}` }
-if (month < 10) { month = `0${month}` }
-const today = `${day}/${month}/${year}`;
-
-
-
-function Wallet({ updateUser, user }) {
-
-    console.log(user)
-    console.log(user.transactions)
-
+function Wallet({ user, today }) {
     let balance, pound, pence
 
     if (user.balance === undefined) {
@@ -48,9 +34,7 @@ function Wallet({ updateUser, user }) {
                     </div>
                 </div>
             </div>
-
-            {(user.transactions) ? <Transactions trans={user.transactions}/> : <></>}
-
+            {(user.transactions) ? <Transactions trans={user.transactions} /> : <></>}
         </>
     )
 }

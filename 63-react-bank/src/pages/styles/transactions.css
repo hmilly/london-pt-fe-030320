@@ -70,6 +70,13 @@
     margin: 0;
 }
 
+.today{
+    text-align: left;
+    font-size: smaller;
+    font-weight: 100;
+    margin: 0;
+}
+
 /* ------------------   styles for Settings tab -----------------*/
 
 

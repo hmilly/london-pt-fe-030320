@@ -4,7 +4,7 @@ import "../styles/wallet.css"
 import Transactions from "./Transactions"
 
 
-function Savings({ user }) {
+function Savings({ user, today }) {
     return (
         <>
             <Mainheader />
@@ -21,7 +21,7 @@ function Savings({ user }) {
                     <button className="out">PAY OUT</button>
                 </div>
             </div>
-            {(user.savingsBal) ? <Transactions trans={user.savingTran}/> : <></>}
+            {(user.savingsBal) ? <Transactions trans={user.savingTran} today={today} /> : <></>}
         </>
     )
 }
