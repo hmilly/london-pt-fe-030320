@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 import Mainheader from "./Mainheader"
 import "../styles/wallet.css"
 import man1 from "../img/man_1.png"
-import "../styles/transactions.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons"
 import Transactions from './Transactions'
 
 const todayObj = new Date();
@@ -19,6 +16,19 @@ const today = `${day}/${month}/${year}`;
 
 function Wallet({ updateUser, user }) {
 
+    console.log(user)
+    console.log(user.transactions)
+
+    let balance, pound, pence
+
+    if (user.balance === undefined) {
+        pound = "-"
+    } else {
+        balance = Number(user.balance)
+        pound = Math.trunc(balance)
+        let bp = (balance - pound).toFixed(2)
+        pence = bp.slice(bp.length - 2)
+    }
 
     return (
         <>
@@ -26,8 +36,8 @@ function Wallet({ updateUser, user }) {
             <div className="account">
                 <div className="walletbalance">
                     <div className="balance">
-                        <h1 className="pounds">{user.balance}</h1>
-                        <h3 className="pence">.00</h3>
+                        <h1 className="pounds">{pound}.</h1>
+                        <h3 className="pence">{pence}</h3>
                     </div>
                     <p className="balanceP">Balance</p>
                 </div>
@@ -39,21 +49,7 @@ function Wallet({ updateUser, user }) {
                 </div>
             </div>
 
-            <div className="transactions_main">
-                <div className="tran_header">
-                    <p className="tran_txt">Transactions</p>
-                    <p className="tran_amount">Amount</p>
-                </div>
-                <div className="transactions">
-
-
-                        {(user.transactions) ? <Transactions user={user} /> : <></>}
-
-
-                </div>
-            </div>
-
-
+            {(user.transactions) ? <Transactions trans={user.transactions}/> : <></>}
 
         </>
     )

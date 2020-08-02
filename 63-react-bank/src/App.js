@@ -29,13 +29,13 @@ function App() {
 						<Signup updateUser={updateUser} user={user} />
 					</Route>
 					<Route path="/wallet">
-						<Wallet updateUser={updateUser} user={user} />
+						<Wallet user={user} />
 					</Route>
 					<Route path="/savings">
-						<Savings updateUser={updateUser} user={user} />
+						<Savings user={user} />
 					</Route>
 					<Route path="/loans">
-						<Loans updateUser={updateUser} user={user} />
+						<Loans user={user} />
 					</Route>
 				</Switch>
 

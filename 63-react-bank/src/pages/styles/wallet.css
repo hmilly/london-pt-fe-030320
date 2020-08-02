@@ -82,3 +82,7 @@
 .takeout{
     background-color: turquoise;
 }
+
+.transfer{
+    border: red solid 1px;
+}

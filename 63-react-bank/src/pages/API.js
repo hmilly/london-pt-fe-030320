@@ -7,7 +7,7 @@ const users = [
 		email: "lmuck@gmail.com",
 		pword: "l",
 		avatar: "",
-		balance: 100.00,
+		balance: 100.99,
 		savingsBal: 10000,
 		loansBal: -10.00,
 		transactions: [
@@ -27,9 +27,26 @@ const users = [
 				plus: 15.99
 			},
 		],
-		"loan": [
-
-		]
+		savingTran: [
+			{
+				transName: "savings",
+				minus: 6.50,
+			},
+			{
+				transName: "savings",
+				plus: 2.99,
+			},
+		],
+		loansTran: [
+			{
+				transName: "loans",
+				plus: 25.44,
+			},
+			{
+				transName: "loans",
+				minus: 15.80,
+			},
+		],
 	},
 	{
 		id: 2,
@@ -43,12 +60,8 @@ const users = [
 		loansBal: -10,
 		transactions: {
 			transName: "Marks and Spencers",
-
 			plus: 5
 		},
-		"loan": [
-
-		]
 	},
 	{
 		id: 3,
@@ -63,11 +76,7 @@ const users = [
 		transactions: {
 			transName: "Costa",
 			minus: 3.10,
-
 		},
-		"loan": [
-
-		]
 	}, {
 		id: 4,
 		firstName: "floridan",
@@ -80,12 +89,8 @@ const users = [
 		loansBal: 0,
 		transactions: {
 			transName: "Black market",
-
 			plus: 5000
 		},
-		"loan": [
-
-		]
 	}
 ]
 

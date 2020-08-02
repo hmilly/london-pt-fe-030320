@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import Mainheader from "./Mainheader"
 import "../styles/wallet.css"
+import Transactions from "./Transactions"
 
 
-
-function Loans({user}) {
+function Loans({ user }) {
     return (
         <>
             <Mainheader />
             <div className="account">
                 <div className="loansbalance">
                     <div className="balance">
-                        <h1 className="pounds">{user.loansBal}</h1>
-                        {/* <h3 className="pence">.00</h3> */}
+                        <h1 className="pounds">{user.loansBal === undefined
+                            ? "-" : Number(user.loansBal).toFixed(2)}</h1>
                     </div>
                     <p className="balanceP">Balance</p>
                 </div>
@@ -21,7 +21,7 @@ function Loans({user}) {
                     <button className="out payback">PAY BACK</button>
                 </div>
             </div>
-
+            {(user.loansBal) ? <Transactions trans={user.loansTran}/> : <></>}
         </>
     )
 }

@@ -3,6 +3,7 @@ import Mainheader from "./Mainheader"
 import "../styles/wallet.css"
 import Transactions from "./Transactions"
 
+
 function Savings({ user }) {
     return (
         <>
@@ -10,8 +11,8 @@ function Savings({ user }) {
             <div className="account">
                 <div className="savingsbalance">
                     <div className="balance">
-                        <h1 className="pounds">{user.savingsBal}</h1>
-                        {/* <h3 className="pence">.00</h3> */}
+                        <h1 className="pounds">{user.savingsBal === undefined
+                            ? "-" : Number(user.savingsBal).toFixed(2)}</h1>
                     </div>
                     <p className="balanceP">Balance</p>
                 </div>
@@ -20,7 +21,7 @@ function Savings({ user }) {
                     <button className="out">PAY OUT</button>
                 </div>
             </div>
-
+            {(user.savingsBal) ? <Transactions trans={user.savingTran}/> : <></>}
         </>
     )
 }
