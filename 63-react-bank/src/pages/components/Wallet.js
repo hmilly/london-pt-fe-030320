@@ -5,15 +5,18 @@ import man1 from "../img/man_1.png"
 import Transactions from './Transactions'
 
 function Wallet({ user, today }) {
+
     let balance, pound, pence
 
     if (user.balance === undefined) {
-        pound = "-"
+        pound = 0
+        pence = 0
     } else {
         balance = Number(user.balance)
         pound = Math.trunc(balance)
         let bp = (balance - pound).toFixed(2)
         pence = bp.slice(bp.length - 2)
+
     }
 
     return (

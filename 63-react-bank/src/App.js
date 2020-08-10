@@ -21,9 +21,13 @@ function App() {
 	const today = `${day}/${month}/${year}`;
 
 	const [user, setUser] = useState({})
-
 	const updateUser = (user) => {
 		setUser(user)
+	}
+	
+	const [savingsBal, setSavingsBal] = useState(0)
+	const updateSavings = (balance) => {
+		setSavingsBal(balance)
 	}
 
 	return (
@@ -37,13 +41,13 @@ function App() {
 						<Signup updateUser={updateUser} user={user} />
 					</Route>
 					<Route path="/wallet">
-						<Wallet user={user} today={today} />
+						<Wallet updateUser={updateUser} user={user} today={today} />
 					</Route>
 					<Route path="/savings">
-						<Savings user={user} today={today} />
+						<Savings updateSavings={updateSavings} user={user} today={today} />
 					</Route>
 					<Route path="/loans">
-						<Loans user={user} today={today} />
+						<Loans updateUser={updateUser} user={user} today={today} />
 					</Route>
 				</Switch>
 			</div>

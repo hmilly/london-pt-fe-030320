@@ -4,7 +4,34 @@ import "../styles/wallet.css"
 import Transactions from "./Transactions"
 
 
-function Savings({ user, today }) {
+function Savings({ updateSavings, user, today }) {
+
+    const updateBalance = (e) => {
+
+        console.log(e)
+        // if (op === "-"){
+        // user.savingsBal -= num
+        // updateSavings(user.savingsBal)
+        // } else {
+        // user.savingsBal += num
+        // updateSavings(user.savingsBal)
+        // }
+
+    }
+
+    const [toggleDisplay, setToggleDisplay] = useState(false)
+
+    let userInput
+
+    if (toggleDisplay) {
+        userInput =
+            <div className="toggledButton" onClick={() => setToggleDisplay(true)}>
+                <p>£</p>
+                <input></input>
+                <button onClick={(e) => updateBalance(e)}>Transfer</button>
+            </div>
+    }
+
     return (
         <>
             <Mainheader />
@@ -14,10 +41,14 @@ function Savings({ user, today }) {
                         <h1 className="pounds">{user.savingsBal === undefined
                             ? "-" : Number(user.savingsBal).toFixed(2)}</h1>
                     </div>
-                    <p className="balanceP">Balance</p>
+                    <div>
+                        <p className="balanceP">Balance</p>
+                        {userInput}
+                        </div>
+
                 </div>
                 <div className="savingsbuttons">
-                    <button className="in">PAY IN</button>
+                    <button className="in" onClick={() => setToggleDisplay(!toggleDisplay)}>PAY IN</button>
                     <button className="out">PAY OUT</button>
                 </div>
             </div>

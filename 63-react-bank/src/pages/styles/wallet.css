@@ -86,3 +86,26 @@
 .transfer{
     border: red solid 1px;
 }
+
+
+
+.toggledButton{
+    display: flex;
+    width: 150%;
+}
+.toggledButton > p{
+    margin: auto 0;
+    padding: 2%;
+}
+.toggledButton > input{
+    border-bottom: grey solid 1px;
+    margin: auto 1%;
+}
+.toggledButton > button{
+    color: white;
+    background-color: orangered;
+    margin: auto 0;
+    width: 40%;
+    padding: 1% 0;
+    cursor: pointer;
+}
