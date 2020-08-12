@@ -8,7 +8,7 @@ const users = [
 		pword: "l",
 		avatar: "",
 		balance: 100.99,
-		savingsBal: 10000,
+		savingsBal: 10000.00,
 		loansBal: -10.00,
 		transactions: [
 			{
@@ -56,11 +56,11 @@ const users = [
 		pword: "m",
 		avatar: "",
 		balance: 599.01,
-		savingsBal: 15,
-		loansBal: -10,
+		savingsBal: 15.00,
+		loansBal: -10.00,
 		transactions: {
 			transName: "Marks and Spencers",
-			plus: 5
+			plus: 5.00
 		},
 	},
 	{
@@ -70,9 +70,9 @@ const users = [
 		email: "hmuck@gmail.com",
 		pword: "h",
 		avatar: "",
-		balance: 101,
-		savingsBal: 0,
-		loansBal: -1,
+		balance: 101.00,
+		savingsBal: 0.00,
+		loansBal: -1.00,
 		transactions: {
 			transName: "Costa",
 			minus: 3.10,
@@ -84,12 +84,12 @@ const users = [
 		email: "fmuck@gmail.com",
 		pword: "f",
 		avatar: "",
-		balance: 122,
-		savingsBal: 2000,
-		loansBal: 0,
+		balance: 122.00,
+		savingsBal: 2000.00,
+		loansBal: 0.00,
 		transactions: {
 			transName: "Black market",
-			plus: 5000
+			plus: 5000.00
 		},
 	}
 ]

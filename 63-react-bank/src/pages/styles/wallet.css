@@ -1,15 +1,20 @@
 .account{
     display: flex;
+    flex-direction: column;
     background: rgb(36,36,36);
     background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
-    color: white;
     align-self: center;
-    position: absolute;
-    justify-self: space-around;
-    height: 15%;
+    height: auto;
+    padding: 0 1%;
     border-radius: 10px;
     margin-top: 10%;
     width: 40%;
+}
+.accountsData{
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    width: 100%;
 }
 
 .walletbalance{
@@ -91,21 +96,40 @@
 
 .toggledButton{
     display: flex;
-    width: 150%;
+    border-top: grey solid 1px;
+    width: 93%;
+    align-self: center;
+    color: white;
+    padding: 3% 0;
 }
-.toggledButton > p{
-    margin: auto 0;
+.toggledButton > form, .toggledButton > form  > div{
+    display: flex;
+    width: 100%;
     padding: 2%;
 }
-.toggledButton > input{
+
+.toggledButton > form  > div{
     border-bottom: grey solid 1px;
-    margin: auto 1%;
 }
-.toggledButton > button{
+.toggledButton> form> div > p{
+    margin: auto 0;
+}
+.toggledButton> form > div> input{
+    margin: auto 1%;
+    border-bottom: none;
+}
+
+.toggledButton> form > div> input::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+}
+
+.toggledTrans{
     color: white;
     background-color: orangered;
     margin: auto 0;
-    width: 40%;
-    padding: 1% 0;
+    width: 50%;
+    padding: 1%;
+    margin: 0 1%;
     cursor: pointer;
 }
+

@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import SettingsForm from "./SettingsForm"
 
-function Settings(props) {
+function Settings({setMenu}) {
     return (
         <div className="settings">
             <div className="settingsTitle">
-                <a onClick={() => props.setMenu(false)}>
+                <a onClick={() => setMenu(false)}>
                     <FontAwesomeIcon icon={faArrowLeft} />
                 </a>
                 <h1>Settings</h1>

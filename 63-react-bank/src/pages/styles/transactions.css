@@ -4,11 +4,10 @@
     background: rgb(36,36,36);
     background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
     color: white;
-    position: absolute;
     align-self: center;
     height: auto;
     border-radius: 10px;
-    margin-top: 25%;
+    margin-top: 5%;
     width: 40%;
 }
 
@@ -81,10 +80,10 @@
 
 
 .settings{
+    position: absolute;
+    top: 7%;
     height: 100%;
-
     width: 20%;
     background: rgb(36,36,36);
     background: linear-gradient(45deg, rgba(36,36,36,1) 0%, rgba(52,52,52,1) 0%, rgba(37,37,43,1) 100%);
-    
 }

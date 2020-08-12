@@ -23,17 +23,19 @@ function Wallet({ user, today }) {
         <>
             <Mainheader />
             <div className="account">
-                <div className="walletbalance">
-                    <div className="balance">
-                        <h1 className="pounds">{pound}.</h1>
-                        <h3 className="pence">{pence}</h3>
+                <div className="accountsData">
+                    <div className="walletbalance">
+                        <div className="balance">
+                            <h1 className="pounds">{pound}.</h1>
+                            <h3 className="pence">{pence}</h3>
+                        </div>
+                        <p className="balanceP">Balance</p>
                     </div>
-                    <p className="balanceP">Balance</p>
-                </div>
-                <div className="userdate">
-                    <img src={man1} alt="user image"></img>
-                    <div>
-                        <p>{today}</p>
+                    <div className="userdate">
+                        <img src={man1} alt="user image"></img>
+                        <div>
+                            <p>{today}</p>
+                        </div>
                     </div>
                 </div>
             </div>

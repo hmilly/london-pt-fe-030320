@@ -18,8 +18,11 @@ function Mainheader() {
     return (
         <>
             <div className="header">
-                <div className="headImg"><img src={ch} alt="CH" className="ch"></img></div>
+                <div className="headImg">
+                    <img src={ch} alt="CH" className="ch"></img>
+                </div>
                 <ul className="txt">
+        
                     <li>
                         <Link to="/wallet">WALLET</Link>
                     </li>
