@@ -5,7 +5,7 @@ import Transactions from "./Transactions"
 import ToggleDisplay from './ToggleDisplay'
 
 
-function Loans({ user, today }) {
+function Loans({updateUser, user, today }) {
     
 
     const [loanTransfer, setLoanTransfer] = useState(false)
@@ -13,7 +13,12 @@ function Loans({ user, today }) {
     let userInput
     if (loanTransfer) {
         userInput =
-            <ToggleDisplay setUserInput={setLoanTransfer} onClick={() => setLoanTransfer(true)}/>
+            <ToggleDisplay
+            setUserInput={setLoanTransfer}
+            updateUser={updateUser}
+            identifier={"loans"}
+            user={user}
+            onClick={() => setLoanTransfer(true)}/>
     }
 
     return (

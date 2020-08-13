@@ -15,6 +15,7 @@ function Savings({ updateUser, user, today }) {
             <ToggleDisplay
             setUserInput={setSavingsTransfer}
             updateUser={updateUser}
+            identifier={"savings"}
             user={user}
             onClick={() => setSavingsTransfer(true)}
             />
