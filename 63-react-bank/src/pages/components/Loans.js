@@ -7,16 +7,14 @@ import ToggleDisplay from './ToggleDisplay'
 
 function Loans({updateUser, user, today }) {
     
-
-    const [loanTransfer, setLoanTransfer] = useState(false)
-
+    const [loanTransfer, setLoanTransfer] = useState({ state: false, btnName: "", compName: "loans" })
     let userInput
-    if (loanTransfer) {
+    if (loanTransfer.state) {
         userInput =
             <ToggleDisplay
+            savingsTransfer={loanTransfer}
             setUserInput={setLoanTransfer}
             updateUser={updateUser}
-            identifier={"loans"}
             user={user}
             onClick={() => setLoanTransfer(true)}/>
     }
@@ -34,8 +32,12 @@ function Loans({updateUser, user, today }) {
                         <p className="balanceP">Balance</p>
                     </div>
                     <div className="savingsbuttons">
-                        <button className="in takeout" onClick={() => setLoanTransfer(!loanTransfer)}>TAKE LOAN</button>
-                        <button className="out payback">PAY BACK</button>
+                        <button className="in takeout"
+                        onClick={() => setLoanTransfer({ ...loanTransfer, state: !loanTransfer.state, btnName: "in" })}>
+                            TAKE LOAN</button>
+                        <button className="out payback"
+                        onClick={() => setLoanTransfer({ ...loanTransfer, state: !loanTransfer.state, btnName: "out" })}>
+                            PAY BACK</button>
                     </div>
                 </div>
                 {userInput}

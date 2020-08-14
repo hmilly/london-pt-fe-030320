@@ -7,17 +7,16 @@ import ToggleDisplay from './ToggleDisplay'
 
 function Savings({ updateUser, user, today }) {
 
-    const [savingsTransfer, setSavingsTransfer] = useState(false)
-
+    const [savingsTransfer, setSavingsTransfer] = useState({ state: false, btnName: "", compName: "savings" })
     let userInput
-    if (savingsTransfer) {
+    if (savingsTransfer.state) {
         userInput =
             <ToggleDisplay
-            setUserInput={setSavingsTransfer}
-            updateUser={updateUser}
-            identifier={"savings"}
-            user={user}
-            onClick={() => setSavingsTransfer(true)}
+                savingsTransfer={savingsTransfer}
+                setUserInput={setSavingsTransfer}
+                updateUser={updateUser}
+                user={user}
+                onClick={() => setSavingsTransfer(true)}
             />
     }
 
@@ -36,13 +35,17 @@ function Savings({ updateUser, user, today }) {
                         </div>
                     </div>
                     <div className="savingsbuttons">
-                        <button className="in" onClick={() => setSavingsTransfer(!savingsTransfer)}>PAY IN</button>
-                        <button className="out">PAY OUT</button>
+                        <button className="in"
+                            onClick={() => setSavingsTransfer({ ...savingsTransfer, state: !savingsTransfer.state, btnName: "in" })}>
+                                PAY IN</button>
+                        <button className="out"
+                            onClick={() => setSavingsTransfer({ ...savingsTransfer, state: !savingsTransfer.state, btnName: "out" })}>
+                                PAY OUT</button>
                     </div>
                 </div>
                 {userInput}
             </div>
-            
+
 
             {(user.savingsBal) ? <Transactions trans={user.savingTran} today={today} /> : <></>}
         </>

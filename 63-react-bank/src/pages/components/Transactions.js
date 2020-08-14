@@ -17,9 +17,9 @@ function Transactions({ trans, today }) {
                         <h5 className="companyname">
                             {(() => {
                                 if (t.transName === "loan") {
-                                    return (t.plus ? "Thanks for payment" : "Loan")
+                                    return (t.plus ? "Paid" : "Taken")
                                 } else if (t.transName === "savings") {
-                                    return (t.plus ? "Deposit" : "Pay out")
+                                    return (t.plus ? "Deposit" : "Paid out")
                                 } else {
                                     return (t.transName)
                                 }
