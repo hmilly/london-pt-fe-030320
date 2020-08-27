@@ -5,6 +5,7 @@ import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons"
 import "../styles/transactions.css"
 
 function Transactions({ trans, today }) {
+    console.log(trans)
     return (
         <div className="transactions_main">
             <div className="tran_header">
@@ -15,15 +16,7 @@ function Transactions({ trans, today }) {
                 {trans.map((t, i) => (
                     <div className="transaction" key={i}>
                         <h5 className="companyname">
-                            {(() => {
-                                if (t.transName === "loan") {
-                                    return (t.plus ? "Paid" : "Taken")
-                                } else if (t.transName === "savings") {
-                                    return (t.plus ? "Deposit" : "Paid out")
-                                } else {
-                                    return (t.transName)
-                                }
-                            })()}
+                            {t.transName}
                             {today ? <p className="today">{today}</p> : <></>}
                         </h5>
 
