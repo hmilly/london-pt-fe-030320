@@ -1,13 +1,8 @@
-
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import ch from "../img/CH.png"
-import "../styles/headers.css"
-import Settings from "./Settings"
 
-
-
-function Mainheader() {
+function Mainheader({Settings}) {
 
     const [showMenu, setShowMenu] = useState(false)
     let menu;
@@ -33,7 +28,7 @@ function Mainheader() {
                         <Link to="/loans">LOANS</Link>
                     </li>
                     <li>
-                        <a onClick={() => setShowMenu(!showMenu)}>SETTINGS</a>
+                        <button onClick={() => setShowMenu(!showMenu)} >SETTINGS</button>
                     </li>
                     <li>
                         <Link to="/">SIGN OUT</Link>

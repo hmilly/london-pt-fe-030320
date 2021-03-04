@@ -6,7 +6,7 @@
  *
  * PS: use console.log() to see the result
  */
-let user = {
+const user = {
   firstName: "H",
   lastName: "M",
   age: 20
@@ -20,7 +20,7 @@ console.log(user);
  *
  * PS: use console.log() to see the result
  */
-let allTypes = {
+const allTypes = {
   string: "Hello",
   number: 4,
   array: ["item1", "item2"],

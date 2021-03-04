@@ -1,6 +1,5 @@
 import React from 'react'
 import ch from "../img/CH.png"
-import "../styles/headers.css"
 
 function Lsheader() {
     return (

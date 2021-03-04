@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, Link } from "react-router-dom";
-import "../styles/login.css";
-import Loginheader from "./Loginheader";
-import users from "../API"
 
-
-const LoginPage = ({ updateUser, user }) => {
+const LoginPage = ({ updateUser, user, allUsers }) => {
     const history = useHistory();
+
     const [enteredEmail, setEnteredEmail] = useState("")
     const [enteredPword, setEnteredPword] = useState("")
 
     useEffect(() => {
-        users.find(e => { if (e.email === enteredEmail) updateUser(e) })
+        allUsers.find(e => { if (e.email === enteredEmail) updateUser(e) })
     })
 
     const handleSubmit = (e) => {
@@ -25,7 +22,6 @@ const LoginPage = ({ updateUser, user }) => {
 
     return (
         <>
-            <Loginheader />
             <div className="login-box">
                 <div className="login-head"><p>Login</p></div>
                 <form className="login-body" onSubmit={handleSubmit} >
@@ -42,10 +38,8 @@ const LoginPage = ({ updateUser, user }) => {
                 </form>
             </div>
         </>
-
     )
 }
-
 
 export default LoginPage
 

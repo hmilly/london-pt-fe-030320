@@ -9,9 +9,9 @@ let counter = 0;
  *
  * NOTE: ".counter_value" should always represent the current value of {counter}
  */
-let counterVal = document.querySelector(".counter_value");
+const counterVal = document.querySelector(".counter_value");
 
-let action = (symbol) => {
+const action = (symbol) => {
   if (symbol === "+") {
     counter += step;
     counterVal.innerText = counterVal.value = counter;
@@ -32,7 +32,7 @@ let action = (symbol) => {
  *
  */
 
-let button = document.querySelector(".step_form");
+const button = document.querySelector(".step_form");
 button.addEventListener("submit", () => {
   let stepVal = document.querySelector(".step_value");
   let inputStep = document.querySelector("#step");
@@ -47,7 +47,7 @@ button.addEventListener("submit", () => {
  *
  * NOTE: remember to use your {action} function
  */
-let decrementClick = document.querySelector("#decrement");
+const decrementClick = document.querySelector("#decrement");
 decrementClick.addEventListener("click", () => action("-"));
 /**
  * Exercise 4
@@ -57,7 +57,7 @@ decrementClick.addEventListener("click", () => action("-"));
  *
  * NOTE: remember to use your {action} function
  */
-let incrementtClick = document.querySelector("#increment");
+const incrementtClick = document.querySelector("#increment");
 incrementtClick.addEventListener("click", () => action("+"));
 /**
  * Exercise 5
@@ -69,7 +69,7 @@ incrementtClick.addEventListener("click", () => action("+"));
  */
 let interval = 0;
 
-let autoDec = document.querySelector("#auto_decrement");
+const autoDec = document.querySelector("#auto_decrement");
 autoDec.addEventListener("click", () => {
   clearInterval(interval);
   interval = setInterval(() => {
@@ -84,7 +84,7 @@ autoDec.addEventListener("click", () => {
  *
  * NOTE: ".counter_value" should represent current state of counter
  */
-let autoInc = document.querySelector("#auto_increment");
+const autoInc = document.querySelector("#auto_increment");
 autoInc.addEventListener("click", () => {
   clearInterval(interval);
   interval = setInterval(() => {
@@ -97,7 +97,7 @@ autoInc.addEventListener("click", () => {
  * when the user clicks on "#stop_auto",
  * the auto counter should stop
  */
-let stopbut = document.querySelector("#stop_auto");
+const stopbut = document.querySelector("#stop_auto");
 stopbut.addEventListener("click", () => {
   clearInterval(interval);
 });

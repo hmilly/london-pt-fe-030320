@@ -8,14 +8,10 @@ const ingredients = [
 
 const syncCookIngredient = ({ name, time }) => {
   const start = Date.now();
-
   console.log(`Start cooking ${name}`);
-
   while (start + time > Date.now()) {}
-
   console.log(`${name} cooked!`);
 };
-
 /**
  * Exercise 1
  *
@@ -29,7 +25,6 @@ const syncCookIngredient = ({ name, time }) => {
  */
 let syncCookMeal = (ingredientsToCook) => {
   ingredientsToCook.map((ing) => syncCookIngredient({ ing }));
-
   console.log("Soup is ready to serve");
 };
 

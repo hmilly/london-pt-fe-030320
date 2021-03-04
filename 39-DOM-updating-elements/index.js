@@ -9,21 +9,21 @@
  * and displays it in the h1
  */
 
-let setTitle = (str) => (document.querySelector("h1").innerText = str);
+const setTitle = (str) => (document.querySelector("h1").innerText = str);
 
 /**
  * Exercise 2
  * create a function {appendToTitle} which takes a string as an argument
  * and appends it to existing h1 text
  */
-let appendToTitle = (str) => (document.querySelector("h1").innerText += str);
+const appendToTitle = (str) => (document.querySelector("h1").innerText += str);
 
 /**
  * Exercise 3
  * create a function {prependToTitle} which takes a string as an argument
  * and prepends it to existing h1 element text
  */
-let prependToTitle = (str) => {
+const prependToTitle = (str) => {
   let el = document.querySelector("h1");
   el.innerText = str + el.innerText;
 };
@@ -34,7 +34,7 @@ let prependToTitle = (str) => {
  * text is displayed inside that element. The element should the tag name
  * passed into the function
  */
-let setInnerHTMLForDiv = (tagName, text) =>
+const setInnerHTMLForDiv = (tagName, text) =>
   (document.querySelector(
     "div"
   ).innerHTML = `<${tagName}>${text}</${tagName}>`);
@@ -44,7 +44,7 @@ let setInnerHTMLForDiv = (tagName, text) =>
  * create a function {pushPtoDivWithText} which takes a string as an argument
  * should add 'p' tag with text 'Hi again'
  */
-let pushPtoDivWithText = (str) => {
+const pushPtoDivWithText = (str) => {
   let span = document.querySelector("div");
   let newEl = document.createElement("p");
 
@@ -59,7 +59,7 @@ let pushPtoDivWithText = (str) => {
  * as arguments and set it as a src and alt attributes values
  * for existing img
  */
-let setSrcToImage = (url, descript) => {
+const setSrcToImage = (url, descript) => {
   let image = document.querySelector("img");
   image.src = url;
   image.alt = descript;
@@ -75,7 +75,7 @@ let setSrcToImage = (url, descript) => {
  *
  * Also add an attribute that opens your page in a new tab
  */
-let setCodersInHoodsLink = (url, text) => {
+const setCodersInHoodsLink = (url, text) => {
   let tag = document.querySelector("a");
 
   tag.href = url;
@@ -88,7 +88,7 @@ let setCodersInHoodsLink = (url, text) => {
  * create a function {disableResetBtn} which will disable button
  * with class "reset"
  */
-let disableResetBtn = () => {
+const disableResetBtn = () => {
   let btn = document.querySelector('.reset');
 
   btn.disabled = true;
@@ -100,7 +100,7 @@ let disableResetBtn = () => {
  * create a function {disableBtns} which takes class name as an argument
  * and disable all buttons with this class name
  */
-let disableBtns = (className) => {
+const disableBtns = (className) => {
   let btn = document.querySelectorAll(`.${className}`);
 
   for (var i = 0; i < btn.length; i++) {
@@ -119,7 +119,7 @@ let disableBtns = (className) => {
  * you will see a difference
  */
 
-let addClassToLi = () => {
+const addClassToLi = () => {
   let items = document.querySelectorAll("li");
 
   for (var i = 0; i < items.length; i++) {
@@ -148,7 +148,7 @@ const removeListItemClass = () => {
  * a CSS selector. Use to selector to find an element, then add
  * the id to the element
  */
-let addId = (id, select) => {
+const addId = (id, select) => {
   let item = document.querySelector(select);
   item.id = id;
 };
@@ -164,7 +164,7 @@ let addId = (id, select) => {
  * use the selector to find all the elements which match, then
  * set the CSS property to the value
  */
-let setStyles = (propName, propVal, selector) => {
+const setStyles = (propName, propVal, selector) => {
   let item = document.querySelectorAll(selector);
   for (var i = 0; i < item.length; i++){
     item[i].setAttribute("style", `${propName}: ${propVal}`);

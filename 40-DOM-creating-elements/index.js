@@ -9,7 +9,7 @@
  *
  * NOTE: we will use this function for other exercises.
  */
-let createDOMElement = (tag) => {
+const createDOMElement = (tag) => {
   let el = document.createElement(tag);
   return el;
 };
@@ -20,7 +20,7 @@ let createDOMElement = (tag) => {
  * create a "p" tag which displays the text and appends it to
  * the body of the document
  */
-let addPTag = (str) => {
+const addPTag = (str) => {
   let text = document.createElement("p");
   text.innerText = str;
   document.body.append(text);
@@ -33,7 +33,7 @@ let addPTag = (str) => {
  * which displays the text and has the class and appends
  * the element to the body
  */
-let addElementWithClass = (tag, str, className) => {
+const addElementWithClass = (tag, str, className) => {
   let el = document.createElement(tag);
   el.innerText = str;
   el.classList.add(className);
@@ -47,7 +47,7 @@ let addElementWithClass = (tag, str, className) => {
  * text and an array of classes. Create an element which displays the
  * text, has the array of classes and append it to the body
  */
-let addElementWithMultipleClasses = (tag, str, classArr) => {
+const addElementWithMultipleClasses = (tag, str, classArr) => {
   let el = document.createElement(tag);
   el.innerText = str;
   classArr.forEach((item) => el.classList.add(item));
@@ -64,7 +64,7 @@ let addElementWithMultipleClasses = (tag, str, classArr) => {
  * Each li should have the text "Item $" (where $ is it's position)
  * Add the list element to the body
  */
-let buildAList = (listType, className, num) => {
+const buildAList = (listType, className, num) => {
   let el = document.createElement(listType);
   el.classList.add(className);
   document.body.append(el);
@@ -109,7 +109,7 @@ const prependLiToList = (text, cName) => {
  *
  */
 
-let pushToSelectedPosition = (text, name, index) => {
+const pushToSelectedPosition = (text, name, index) => {
   let list = document.querySelector("ul");
   let item = document.createElement("li");
   item.innerText = text;
@@ -128,7 +128,7 @@ let pushToSelectedPosition = (text, name, index) => {
  *
  */
 
- let deleteSelectedElements = (parent, el) => {
+const deleteSelectedElements = (parent, el) => {
   let par = document.querySelector(parent);
   let chi = document.querySelectorAll(el);
   chi.forEach(el => par.removeChild(el));

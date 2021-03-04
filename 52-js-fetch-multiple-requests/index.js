@@ -1,8 +1,6 @@
-
 const resultEl = document.querySelector(".result");
 const searchEl = document.querySelector("input");
 const houseURL = "https://anapioficeandfire.com/api/houses/378";
-
 let members = []
 
 const getLinks = async (url) => {

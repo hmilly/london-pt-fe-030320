@@ -8,7 +8,7 @@
  * passed each element and the index.
  *
  */
-let forEach = (arr, cb) => {
+const forEach = (arr, cb) => {
   for (let i = 0; i < arr.length; i++) {
     const el = arr[i];
     cb(el, i);
@@ -27,7 +27,7 @@ let forEach = (arr, cb) => {
  * time the callback was invoked.
  *
  */
-let map = (arr, cb) => {
+const map = (arr, cb) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     let el = arr[i];
@@ -50,7 +50,7 @@ let map = (arr, cb) => {
  * callback returned a truthy value.
  *
  */
-let filter = (arr, cb) => {
+const filter = (arr, cb) => {
   const newArray = [];
   for (let i = 0; i < arr.length; i++) {
     const el = arr[i];
@@ -75,7 +75,7 @@ let filter = (arr, cb) => {
  *
  */
 
-let find = (arr, cb) => {
+const find = (arr, cb) => {
   for (let i = 0; i < arr.length; i++) {
     const el = arr[i];
     if (cb(el, i)) {
@@ -97,7 +97,7 @@ let find = (arr, cb) => {
  * callback returns a truthy value.
  *
  */
-let findIndex = (arr, cb) => {
+const findIndex = (arr, cb) => {
   for (let i = 0; i < arr.length; i++) {
     const el = arr[i];
     if (cb(el, i)) {
@@ -120,7 +120,7 @@ let findIndex = (arr, cb) => {
  * a truthy value.
  *
  */
-let every = (arr, cb) => {
+const every = (arr, cb) => {
   let result = true;
   for (let i = 0; i < arr.length; i++) {
     let el = arr[i];
@@ -147,7 +147,7 @@ let every = (arr, cb) => {
 * a truthy value.
 *
 */
-let some = (arr, cb) => {
+const some = (arr, cb) => {
   let result = false;
   for (i = 0; i < arr.length; i++) {
     let el = arr[i];
@@ -179,7 +179,7 @@ let some = (arr, cb) => {
  * value.
  *
  */
-let reduce = (arr, cb, intVal) => {
+const reduce = (arr, cb, intVal) => {
   let acc = intVal === undefined ? 0 : intVal;
   for (let i = 0; i < arr.length; i++){
     acc = cb(acc, arr[i], i);

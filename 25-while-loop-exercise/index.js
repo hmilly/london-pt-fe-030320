@@ -1,5 +1,4 @@
 let count = 10; // DO NOT TOUCH THIS LINE :)
-
 /**
  * Exercise 1
  * create a function {countdown}
@@ -17,9 +16,7 @@ if (count === 0){
   console.log(`Go!`);
 }
 }
-
 // ==========================
-
 /**
  * Exercise 2
  *
@@ -57,7 +54,6 @@ function rulerConstructor(){
 }
 console.log(ruler)
 // ==========================
-
 /**
  * Exercise 4
  * create a function {partyPadding} which takes an array of names

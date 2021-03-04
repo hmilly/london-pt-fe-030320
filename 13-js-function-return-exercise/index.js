@@ -15,11 +15,7 @@ function greet(name){
  * if the age is less than 18
  */
 function loginValidation(age){
-  if (age < 18){
-    return "Sorry, not allowed.";
-  } else { 
-  return "Welcome!";
-}
+  (age < 18) ? "Sorry, not allowed." : "Welcome!";
 }
 /**
  * Exercise 3

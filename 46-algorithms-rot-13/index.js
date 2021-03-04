@@ -1,7 +1,7 @@
-let str = document.querySelector("textarea")
-let en = document.querySelector("#encrypt")
-let de = document.querySelector("#decrypt")
-let result = document.querySelector(".result")
+const str = document.querySelector("textarea")
+const en = document.querySelector("#encrypt")
+const de = document.querySelector("#decrypt")
+const result = document.querySelector(".result")
 
 en.addEventListener("click", () => {
     result.innerHTML = `${rotr(str.value)}`
@@ -11,7 +11,7 @@ de.addEventListener("click", () => {
     result.innerHTML = `${rotr(str.value)}`
 })
 
-let rotr = (str) => {
+const rotr = (str) => {
     let newStr = '';
     str.split('').map(l => {
         if (l.charCodeAt(0) >= 97 && l.charCodeAt(0) <= 122) {

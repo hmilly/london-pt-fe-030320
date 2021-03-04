@@ -5,7 +5,6 @@
  * assign your favorite animal
  */
  const myFavoriteAnimal = "Dog";
-
 /**
  * Exercise 2
  *
@@ -17,7 +16,6 @@ function myAnimalWithLog() {
   return console.log(`My favorite animal is ${myFavoriteAnimal}`);
 }
 myAnimalWithLog();
-
 /**
  * Exercise 3
  *
@@ -26,7 +24,6 @@ myAnimalWithLog();
  * Check developer tools in your browser for the message
  * and see the difference with console.log
  */
-
 function myAnimalWithWarn() {
    return console.warn(`My favorite animal is ${myFavoriteAnimal}`);
 };

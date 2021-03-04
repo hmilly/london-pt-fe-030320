@@ -1,11 +1,8 @@
 import React from 'react'
-import "../styles/transactions.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons"
-import "../styles/transactions.css"
 
 function Transactions({ trans, today }) {
-    console.log(trans)
     return (
         <div className="transactions_main">
             <div className="tran_header">

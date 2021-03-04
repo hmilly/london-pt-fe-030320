@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
-import Mainheader from "./Mainheader"
-import "../styles/wallet.css"
-import Transactions from "./Transactions"
-import ToggleDisplay from './ToggleDisplay'
 
-
-function Savings({ updateUser, user, today }) {
+function Savings({ updateUser, user, today, ToggleDisplay, Transactions }) {
 
     const [savingsTransfer, setSavingsTransfer] = useState({ state: false, btnName: "", compName: "savings" })
     let userInput
+
     if (savingsTransfer.state) {
         userInput =
             <ToggleDisplay
@@ -22,7 +18,6 @@ function Savings({ updateUser, user, today }) {
 
     return (
         <>
-            <Mainheader />
             <div className="account">
                 <div className="accountsData">
                     <div className="savingsbalance">
@@ -45,13 +40,10 @@ function Savings({ updateUser, user, today }) {
                 </div>
                 {userInput}
             </div>
-
-
             {(user.savingsBal) ? <Transactions trans={user.savingTran} today={today} /> : <></>}
         </>
     )
 }
-
 
 export default Savings
 

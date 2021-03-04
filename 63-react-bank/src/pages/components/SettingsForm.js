@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import "../styles/transactions.css"
 import man1 from "../img/man_1.png"
-
 
 function SettingsForm() {
     return (

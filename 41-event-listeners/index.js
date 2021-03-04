@@ -9,7 +9,7 @@
  * logs a message in the console when a click occurs
  */
 
-let clickTheButton = () => {
+const clickTheButton = () => {
   const item = document.querySelector("button");
 
   item.addEventListener("click", () => console.log("you rang ?"));
@@ -21,7 +21,7 @@ let clickTheButton = () => {
  * create a function {hoverOver} which listens for a hover over an
  * "a" tag inside div with class "mouseover" and logs a message in the console
  */
-let hoverOver = () => {
+const hoverOver = () => {
   const item = document.querySelector("a");
 
   item.addEventListener("mouseover", () => console.log("you rang ?"));
@@ -33,7 +33,7 @@ let hoverOver = () => {
  * cursor leaves the "a" tag inside div with class "mouseover"
  * and log a message in the console
  */
-let handleLeave = () => {
+const handleLeave = () => {
   const item = document.querySelector("a");
 
   item.addEventListener("mouseleave", console.log("you rang ?"));
@@ -44,7 +44,7 @@ let handleLeave = () => {
  * create a function {focusOnMe} which will log a message in the console
  * when you focus on input which is inside 'div' with class 'input'
  */
-let focusOnMe = () => {
+const focusOnMe = () => {
   const item = document.querySelector("input");
 
   item.addEventListener("mouseover", console.log("you rang ?"));
@@ -56,7 +56,7 @@ let focusOnMe = () => {
  * when first you focus on input which is inside 'div' with class 'input'
  * and then click on anything else
  */
-let clickElsewhere = () => {
+const clickElsewhere = () => {
   const item = document.querySelector("input");
 
   item.addEventListener("focus", console.log("you rang ?"));
@@ -68,7 +68,7 @@ let clickElsewhere = () => {
  * when you focus on input which is inside 'div' with class 'input'
  * and then press any key
  */
-let pressAKey = () => {
+const pressAKey = () => {
   const item = document.querySelector("input");
 
   item.addEventListener("keydown", () => console.log("you rang ?"));
@@ -80,7 +80,7 @@ let pressAKey = () => {
  * when you focus on input which is inside 'div' with class 'input'
  * and then press any key and release it
  */
-let releaseAKey = () => {
+const releaseAKey = () => {
   const item = document.querySelector("input");
 
   item.addEventListener("keyup", () => console.log("you rang ?"));
@@ -92,7 +92,7 @@ let releaseAKey = () => {
  * to uppercase when you focus on input which is inside 'div' with class 'input'
  * and then press any key and release it
  */
-let inputToUpperCase = () => {
+const inputToUpperCase = () => {
   let item = document.querySelector("input");
   item.addEventListener("keyup", () => (item.value = item.value.toUpperCase()));
 };
@@ -102,7 +102,7 @@ let inputToUpperCase = () => {
  * create a function {handleSelectChange} which will log selected option value
  * in console when you select an option in "select" with id "items"
  */
-let handleSelectChange = () => {
+const handleSelectChange = () => {
   let item = document.querySelector("select");
 
   item.addEventListener("change", (e) => console.log(e.target.value));
@@ -114,7 +114,7 @@ let handleSelectChange = () => {
  * on submit, build an object where property names will be input names,
  * and values, input values and log it in the console
  */
-let submitFormHandler = () => {
+const submitFormHandler = () => {
   let form = document.querySelector("form");
   let input = document.querySelectorAll("form > input");
   let obj = {};
@@ -133,7 +133,7 @@ let submitFormHandler = () => {
  * on scroll, and log it in the console
  */
 
-let handleScroll = () => {
+const handleScroll = () => {
   window.addEventListener(
     "scroll",
     (e) => {

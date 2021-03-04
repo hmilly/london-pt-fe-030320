@@ -1,4 +1,3 @@
-
 /**
  * create an array "carBrands"
  * and assign to it ["Mercedes", "Volvo", "BMW", "Reno", "Vauxhall", "Land Rover"]

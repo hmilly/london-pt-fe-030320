@@ -1,7 +1,6 @@
 // install and  import "readline-sync" npm package before you do exercises
 var readlineSync = require('readline-sync');
 
-
 let selectedItems = {
 	book: "",
 	movie: "",
@@ -53,9 +52,6 @@ const chooseBook = (books, index) => {
 	user.book = chooseBook[index];
 };
 
-
-
-
 /**
  * Exercise 2
  *
@@ -93,7 +89,6 @@ const chooseDest = (countries, index) => {
  * so user can pick one. User also should have the option "Exit".
  * When the user pick "Exit", log selected items.
  */
-
 const topMenu = ["Books", "Movies", "Next destination"];
 
 const  chooseMenu = () => {

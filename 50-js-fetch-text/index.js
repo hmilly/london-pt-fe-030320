@@ -26,7 +26,7 @@ form.addEventListener("submit", () => {
   getResponse(input.value);
 });
 
-let getResponse = (url) => {
+const getResponse = (url) => {
   fetch(url)
     .then(response => response.text())
     .then(text => result.innerText = text);

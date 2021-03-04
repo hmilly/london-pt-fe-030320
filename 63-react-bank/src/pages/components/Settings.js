@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import "../styles/transactions.css"
+import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import SettingsForm from "./SettingsForm"
@@ -29,12 +27,10 @@ function Settings({setMenu}) {
                     <span className="slider round"></span>
                 </label>
             </div>
-
             <SettingsForm />
         </div>
     )
 }
-
 
 export default Settings
 

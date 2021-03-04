@@ -1,24 +1,49 @@
-import React, { useState, useEffect } from 'react'
-import users from '../API'
-
+import React, { useState } from 'react'
 
 export default function ToggleDisplay({ savingsTransfer, setUserInput, user, updateUser }) {
-
 
     const [num, setNum] = useState(0)
     const handleNum = (n) => {
         return +parseFloat(n).toFixed(2)
     }
 
-
     const handleSubmit = (e) => {
         e.preventDefault()
-
         let newTotBalance
         let newTempBalance
         let newTrans
         let newTempTrans
 
+
+
+    //     const update = (formName, transType, balType) => {
+    //         if (savingsTransfer.btnName === "in") {
+    //             newTotBalance = handleNum(user.balance -= num)
+    //             newTempBalance = handleNum(balType += num)
+    //             newTrans = [...user.transactions, { transName: formName, minus: num }]
+    //             newTempTrans = [ ...user.transType, {transName: formName, plus: num }]
+    //         } else {
+    //             newTotBalance = handleNum(user.balance += num)
+    //             newTempBalance = handleNum(balType -= num)
+    //             newTrans = [...user.transactions, { transName: formName, plus: num }]
+    //             newTempTrans = [...user.transType, { transName: formName, minus: num }]
+    //         }
+    //         updateUser({
+    //             ...user,
+    //             balance: newTotBalance,
+    //             balType: newTempBalance,
+    //             transactions: newTrans,
+    //             tran: newTempTrans
+    //         })
+    //     }
+
+
+    // if (savingsTransfer.compName === "savings") {
+    //         update("savings", savingTran, user.savingsBal)
+    //     } else {
+    //         update("loans", loansTran, user.loansBal)
+    //     }
+            
         if (savingsTransfer.compName === "savings") {
             if (savingsTransfer.btnName === "in"){
                 newTotBalance = handleNum(user.balance -= num)
@@ -62,24 +87,6 @@ export default function ToggleDisplay({ savingsTransfer, setUserInput, user, upd
         } 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     return (
         <div className="toggledButton" onClick={() => setUserInput({ ...savingsTransfer, state: true })}>

@@ -14,7 +14,6 @@ console.log("=====================");
 console.log(`Let me do math for you!`);
 console.log("=====================");
 //===================================
-
 /**
  * Exercise 2
  *
@@ -26,8 +25,6 @@ console.log("=====================");
  * you get correct symbol
  * var readlineSync = require('readline-sync'),
  */
-
-
 const symbol = ['/', '*', '-', '+'];
 const index = readlineSync.keyInSelect(symbol, 'Which equation would you like to use? divide: /, times: *, minus: -, plus: + ?');
 console.log('Working out answer with: ' + symbol[index]);
@@ -64,7 +61,6 @@ const number2 = readlineSync.keyIn('What will the second number be? ',
  * 
  * 
  */
-
 const result = eval(`${number1} ${symbol[index]} ${number2}`);
 console.log("=====================");
 console.log(`Here you go, the result is ${result}`);

@@ -1,7 +1,5 @@
 const myName = "Holly"; // SET YOUR NAME
-
 const visitors = ["Katie", "James", "Sam", "Zach", "Tracey"]; // Add at least 5 names
-
 /**
  * Exercise 1
  *
@@ -14,10 +12,8 @@ function greetVisitors(){
   console.log(`Hi ${visitors[i]}, my name is ${myName}!`);
 }
 }
-
 // ========================
 const numbers = [2, 123, 13, 1, 6, 84, 23, 12, 45]; // DON'T TOUCH THIS LINE :)
-
 /**
  * Exercise 2
  * Create a function {getElementIndex} that uses a for loop to find the index of a
@@ -34,7 +30,6 @@ function getElementIndex(num){
     }
 console.log(getElementIndex(84));
 // ========================
-
 /**
  * Exercise 3
  * Create a function {total} that will return sum of all numbers
@@ -49,9 +44,7 @@ function total(){
 }
 console.log(total());
 // ========================
-
 const numbersForIndexes = [6, 2, 16, 23, 84, 21, 9, 3]; // DON'T TOUCH THIS LINE :)
-
 /**
  * Exercise 4
  * Create a function {addIndex} that takes {numbersForIndexes} array,
@@ -64,9 +57,7 @@ function addIndex(){
   }
   return indexArr;
 }
-
 console.log(addIndex());
-
 
 const forLowestNumber = [5, 234, 96, 34, -34, 0, 23]; // DON'T TOUCH THIS LINE :)
 /**

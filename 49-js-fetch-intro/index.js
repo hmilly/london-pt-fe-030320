@@ -34,8 +34,6 @@ let getResponse = (url) => {
       : result.innerText = `Request failed with status code: ${response.status}`
   )
 };
-
-
 /**
  * Description of the application:
  *

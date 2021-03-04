@@ -18,7 +18,7 @@ const baseURL = "http://localhost:3000";
  *
  * Note: test this function with an URL from your json-server API
  */
-let getComments = async () => {
+const getComments = async () => {
     return await fetch(`${baseURL}/comments`).then(res => res.json()).catch(error => console.log(error))
 }
 
@@ -34,7 +34,7 @@ getComments()
  *
  * Don't forget to handle errors.
  */
-let postComment = async (newComment) => {
+const postComment = async (newComment) => {
     const configObject = {
         method: "POST",
         headers: {
@@ -62,7 +62,7 @@ let postComment = async (newComment) => {
  *
  * Don't forget to handle errors.
  */
-let patchComment = async (comment, newCommentBody) => {
+const patchComment = async (comment, newCommentBody) => {
     const configObject = {
         method: "PATCH",
         headers: {
@@ -87,7 +87,7 @@ let patchComment = async (comment, newCommentBody) => {
  *
  * Don't forget to handle errors.
  */
-let putComment = async (comment) => {
+const putComment = async (comment) => {
     const configObject = {
         method: "PUT",
         headers: {
@@ -111,7 +111,7 @@ let putComment = async (comment) => {
  *
  * Don't forget to handle errors.
  */
-let deleteComment = async (comment) => {
+const deleteComment = async (comment) => {
     const configObject = {
         method: "DELETE",
         headers: {
